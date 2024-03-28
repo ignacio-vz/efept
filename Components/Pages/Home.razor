@@ -2,6 +2,60 @@
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<div>
+    <div class="contenedor-fondo-index">
+        <picture>
+            <source media="(min-width: 1920px)" srcset="static/images/principal_1920x1080.webp">
+            <source media="(min-width: 1280px) and (max-width: 1919px)" srcset="static/images/principal_1280x720.webp">
+            <source media="(min-width: 1024px) and (max-width: 1279px) and (orientation: landscape)"
+                    srcset="static/images/principal_1024x768.webp">
+            <source media="(min-width: 768px) and (orientation: portrait)"
+                    srcset="static/images/principal_768x1024.webp">
+            <source media="(min-width: 720px) and (max-width: 767px) and (orientation: portrait)"
+                    srcset="static/images/principal_720x1280.webp">
+            <source media="(min-width: 640px) and (max-width: 1023px) and (orientation: landscape)"
+                    srcset="static/images/principal_1136x640.webp">
+            <source media="(max-width: 719px) and (orientation: portrait)"
+                    srcset="static/images/principal_480x800.webp">
+            <source media="(max-width: 639px) and (orientation: landscape)"
+                    srcset="static/images/principal_568x320.webp">
+            <img src="static/images/principal_1280x720.webp" alt="fondo_principal" loading="eager"
+                 class="fondo_principal imagenes">
+        </picture>
+        <div class="titulos-fondo-index">
+            <h1>@Titulo</h1>
+            <p>@Texto</p>
+        </div>
+    </div>
+    <div class="contenedor-estafrase-index">
+        <div class="titulo-estafrase-index">
+            <h2>@TituloEstaFrase</h2>
+        </div>
+        <div class="descripcion-estafrase-index">
+            <div class="imagen-estafrase-index">
+                <img src="static/images/estafrase.webp" alt="estafraseesparati" loading="lazy" class="imagen-estafrase">
+            </div>
+            <div class="texto-estafrase-index">
+                <p class="respetar-saltos">@TextoEstaFrase</p>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor-tarjetas-index">
+        @foreach (var Tarjeta in Tarjetas)
+        {
+        <div class="tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
+            <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
+            <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
+            <p class="descripcion-tarjeta">@Tarjeta.Descripcion</p>
+        </div>
+        }
+    </div>
+</div>
 
-Welcome to your new app.
+@code {
+    private string Titulo = "Esta frase es para ti";
+    private string Texto = "Enriquece tus conversaciones. Piensa con claridad";
+    private string TituloEstaFrase = "Esta frase es para ti";
+    private string TextoEstaFrase = "Las frases son unidades mínimas de sabiduría, la destilación de vivencias extensas recogidas en breves enunciados. Esta sabiduría comprimida aguarda ser redescubierta, permitiéndonos pensar con más claridad y enriquecer nuestras conversaciones. \n\nEn este blog analizaremos frases de grandes pensadores de la Historia explorando una rica diversidad de temas. No solo abordaremos el conocimiento, sino que reflexionaremos sobre su aplicación en la vida real, a fin de convertirlo en verdadera sabiduría que mejore nuestra vida. Compartir es un deber cuando se halla un tesoro de valor incalculable.\n\nCuando encuentres una idea poderosa que resuene contigo o pienses en alguien que podría necesitarla, no dudes en compartirla. Simplemente dile… «Esta frase es para ti».";
+
+}
