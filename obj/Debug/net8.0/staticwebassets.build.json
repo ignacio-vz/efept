@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "lZfDucjRjGJj/Ig0SVivL8/ylCUkCMjP8ReKuOyhdNg=",
+  "Source": "efept",
+  "BasePath": "_content/efept",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "efept\\wwwroot",
+      "Source": "efept",
+      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
+      "BasePath": "_content/efept",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\obj\\Debug\\net8.0\\scopedcss\\bundle\\efept.styles.css",
+      "SourceId": "efept",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/efept",
+      "RelativePath": "efept.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\obj\\Debug\\net8.0\\scopedcss\\bundle\\efept.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\efept.bundle.scp.css",
+      "SourceId": "efept",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/efept",
+      "RelativePath": "efept.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\efept.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\app.css",
+      "SourceId": "efept",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
+      "BasePath": "_content/efept",
+      "RelativePath": "app.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    }
+  ]
+}

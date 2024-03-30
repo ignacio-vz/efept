@@ -1,4 +1,6 @@
 ﻿@page "/"
+@attribute [StreamRendering(true)]
+@inject ITarjetaService TarjetaService
 
 <PageTitle>Home</PageTitle>
 
@@ -58,4 +60,10 @@
     private string TituloEstaFrase = "Esta frase es para ti";
     private string TextoEstaFrase = "Las frases son unidades mínimas de sabiduría, la destilación de vivencias extensas recogidas en breves enunciados. Esta sabiduría comprimida aguarda ser redescubierta, permitiéndonos pensar con más claridad y enriquecer nuestras conversaciones. \n\nEn este blog analizaremos frases de grandes pensadores de la Historia explorando una rica diversidad de temas. No solo abordaremos el conocimiento, sino que reflexionaremos sobre su aplicación en la vida real, a fin de convertirlo en verdadera sabiduría que mejore nuestra vida. Compartir es un deber cuando se halla un tesoro de valor incalculable.\n\nCuando encuentres una idea poderosa que resuene contigo o pienses en alguien que podría necesitarla, no dudes en compartirla. Simplemente dile… «Esta frase es para ti».";
 
+    private List<Tarjeta> Tarjetas = new List<Tarjeta>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Tarjetas = await TarjetaService.GetTarjetasAsync();
+    }
 }

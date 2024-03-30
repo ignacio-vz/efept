@@ -1,6 +1,7 @@
 using efept.Components;
 using efept.Components.Account;
 using efept.Data;
+using efept.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -23,9 +24,13 @@ builder.Services.AddAuthentication(options =>
     })
     .AddIdentityCookies();
 
+var dbUser = builder.Configuration["Uid_efept"];
+var dbPassword = builder.Configuration["Pwd_efept"];
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+connectionString += $"Uid={dbUser};Pwd={dbPassword};";
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseMySql(connectionString!, ServerVersion.AutoDetect(connectionString)));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -34,6 +39,8 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddDefaultTokenProviders();
 
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+
+builder.Services.AddScoped<ITarjetaService, TarjetaService>();
 
 var app = builder.Build();
 
