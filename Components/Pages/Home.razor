@@ -7,21 +7,21 @@
 <div>
     <div class="contenedor-fondo-index">
         <picture>
-            <source media="(min-width: 1920px)" srcset="static/images/principal_1920x1080.webp">
-            <source media="(min-width: 1280px) and (max-width: 1919px)" srcset="static/images/principal_1280x720.webp">
+            <source media="(min-width: 1920px)" srcset="images/principal_1920x1080.webp">
+            <source media="(min-width: 1280px) and (max-width: 1919px)" srcset="images/principal_1280x720.webp">
             <source media="(min-width: 1024px) and (max-width: 1279px) and (orientation: landscape)"
-                    srcset="static/images/principal_1024x768.webp">
+                    srcset="images/principal_1024x768.webp">
             <source media="(min-width: 768px) and (orientation: portrait)"
-                    srcset="static/images/principal_768x1024.webp">
+                    srcset="images/principal_768x1024.webp">
             <source media="(min-width: 720px) and (max-width: 767px) and (orientation: portrait)"
-                    srcset="static/images/principal_720x1280.webp">
+                    srcset="images/principal_720x1280.webp">
             <source media="(min-width: 640px) and (max-width: 1023px) and (orientation: landscape)"
-                    srcset="static/images/principal_1136x640.webp">
+                    srcset="images/principal_1136x640.webp">
             <source media="(max-width: 719px) and (orientation: portrait)"
-                    srcset="static/images/principal_480x800.webp">
+                    srcset="images/principal_480x800.webp">
             <source media="(max-width: 639px) and (orientation: landscape)"
-                    srcset="static/images/principal_568x320.webp">
-            <img src="static/images/principal_1280x720.webp" alt="fondo_principal" loading="eager"
+                    srcset="images/principal_568x320.webp">
+            <img src="images/principal_1280x720.webp" alt="fondo_principal" loading="eager"
                  class="fondo_principal imagenes">
         </picture>
         <div class="titulos-fondo-index">
@@ -35,7 +35,7 @@
         </div>
         <div class="descripcion-estafrase-index">
             <div class="imagen-estafrase-index">
-                <img src="static/images/estafrase.webp" alt="estafraseesparati" loading="lazy" class="imagen-estafrase">
+                <img src="images/estafrase.webp" alt="estafraseesparati" loading="lazy" class="imagen-estafrase">
             </div>
             <div class="texto-estafrase-index">
                 <p class="respetar-saltos">@TextoEstaFrase</p>
@@ -65,5 +65,12 @@
     protected override async Task OnInitializedAsync()
     {
         Tarjetas = await TarjetaService.GetTarjetasAsync();
+        foreach (var Tarjeta in Tarjetas)
+        {
+            if (Tarjeta.Descripcion != null && Tarjeta.Descripcion.Length > 24)
+            {
+            Tarjeta.Descripcion = string.Join(" ", Tarjeta.Descripcion.Split().Take(24)) + "...";
+            }
+        }
     }
 }

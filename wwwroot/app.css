@@ -123,16 +123,11 @@ h1:focus {
     padding-right: 50px;
 }
 
-.navbar-ul {
+.navbar-ul-desktop {
     color: white;
     display: flex;
     list-style-type: none;
     gap: 20px;
-}
-
-.idioma {
-    color: white;
-    text-decoration: none;
 }
 
 .hamburger-menu {
@@ -158,14 +153,20 @@ h1:focus {
         display: block;
     }
 
-    .navbar-ul {
+    .navbar-ul-desktop {
+        display: none;
+    }
+
+    .navbar-ul-mobile {
         display: none;
         position: absolute;
         top: 90px;
         left: 0;
         width: 100%;
         z-index: 3;
+        color: white;
         background-color: #4c4c8b;
+        list-style-type: none;
         left: 0;
         flex-direction: column;
         gap: 30px;

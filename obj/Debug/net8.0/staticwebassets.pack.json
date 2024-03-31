@@ -9,6 +9,142 @@
       "PackagePath": "staticwebassets\\app.css"
     },
     {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\discord.svg",
+      "PackagePath": "staticwebassets\\images\\discord.svg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\estafrase.webp",
+      "PackagePath": "staticwebassets\\images\\estafrase.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\favicon_blanco.webp",
+      "PackagePath": "staticwebassets\\images\\favicon_blanco.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\favicon_negro.webp",
+      "PackagePath": "staticwebassets\\images\\favicon_negro.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_300x200.webp",
+      "PackagePath": "staticwebassets\\images\\felicidad_300x200.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_600x400.webp",
+      "PackagePath": "staticwebassets\\images\\felicidad_600x400.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\instagram.svg",
+      "PackagePath": "staticwebassets\\images\\instagram.svg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\instagram_color.svg",
+      "PackagePath": "staticwebassets\\images\\instagram_color.svg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\linkedin.svg",
+      "PackagePath": "staticwebassets\\images\\linkedin.svg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\logo_blanco.webp",
+      "PackagePath": "staticwebassets\\images\\logo_blanco.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\logo_negro.webp",
+      "PackagePath": "staticwebassets\\images\\logo_negro.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_300x200.webp",
+      "PackagePath": "staticwebassets\\images\\mentalidad_300x200.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_600x400.webp",
+      "PackagePath": "staticwebassets\\images\\mentalidad_600x400.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\principal_1024x768.webp",
+      "PackagePath": "staticwebassets\\images\\principal_1024x768.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\principal_1136x640.webp",
+      "PackagePath": "staticwebassets\\images\\principal_1136x640.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\principal_1280x720.webp",
+      "PackagePath": "staticwebassets\\images\\principal_1280x720.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\principal_1920x1080.webp",
+      "PackagePath": "staticwebassets\\images\\principal_1920x1080.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\principal_480x800.webp",
+      "PackagePath": "staticwebassets\\images\\principal_480x800.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\principal_568x320.webp",
+      "PackagePath": "staticwebassets\\images\\principal_568x320.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\principal_720x1280.webp",
+      "PackagePath": "staticwebassets\\images\\principal_720x1280.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\principal_768x1024.webp",
+      "PackagePath": "staticwebassets\\images\\principal_768x1024.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones_personales_300x200.webp",
+      "PackagePath": "staticwebassets\\images\\relaciones_personales_300x200.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones_personales_600x400.webp",
+      "PackagePath": "staticwebassets\\images\\relaciones_personales_600x400.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_300x200.webp",
+      "PackagePath": "staticwebassets\\images\\sabiduria_300x200.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_600x400.webp",
+      "PackagePath": "staticwebassets\\images\\sabiduria_600x400.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_300x200.webp",
+      "PackagePath": "staticwebassets\\images\\salud_300x200.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_600x400.webp",
+      "PackagePath": "staticwebassets\\images\\salud_600x400.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\telegram.svg",
+      "PackagePath": "staticwebassets\\images\\telegram.svg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\tiktok.svg",
+      "PackagePath": "staticwebassets\\images\\tiktok.svg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\whatsapp.svg",
+      "PackagePath": "staticwebassets\\images\\whatsapp.svg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\whatsapp_color.svg",
+      "PackagePath": "staticwebassets\\images\\whatsapp_color.svg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\x_blanco.svg",
+      "PackagePath": "staticwebassets\\images\\x_blanco.svg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\x_color.svg",
+      "PackagePath": "staticwebassets\\images\\x_color.svg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\youtube.svg",
+      "PackagePath": "staticwebassets\\images\\youtube.svg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.efept.props",
       "PackagePath": "build\\efept.props"
     },
