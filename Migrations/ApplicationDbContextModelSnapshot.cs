@@ -218,6 +218,221 @@ namespace efept.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("efept.Entities.Comentario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("IdPost")
+                        .HasColumnType("int");
+
+                    b.Property<string>("IdUsuario")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Texto")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdPost");
+
+                    b.HasIndex("IdUsuario");
+
+                    b.ToTable("Comentarios");
+                });
+
+            modelBuilder.Entity("efept.Entities.Etiqueta", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Etiquetas");
+                });
+
+            modelBuilder.Entity("efept.Entities.EtiquetaLibro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("IdEtiqueta")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdLibro")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdEtiqueta");
+
+                    b.HasIndex("IdLibro");
+
+                    b.ToTable("EtiquetasLibros");
+                });
+
+            modelBuilder.Entity("efept.Entities.EtiquetaPost", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("IdEtiqueta")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPost")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdEtiqueta");
+
+                    b.HasIndex("IdPost");
+
+                    b.ToTable("EtiquetasPosts");
+                });
+
+            modelBuilder.Entity("efept.Entities.Libro", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("Ano")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Autor")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Editorial")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ISBN")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Imagen")
+                        .HasColumnType("longtext");
+
+                    b.Property<decimal?>("Precio")
+                        .HasColumnType("decimal(65,30)");
+
+                    b.Property<string>("Sinopsis")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Titulo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Libros");
+                });
+
+            modelBuilder.Entity("efept.Entities.Post", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Autor")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Categoria")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Cita")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Imagen")
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Puntuacion")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Texto")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Titulo")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Posts");
+                });
+
+            modelBuilder.Entity("efept.Entities.Puntuacion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("IdPost")
+                        .HasColumnType("int");
+
+                    b.Property<string>("IdUsuario")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Puntos")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdUsuario");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("Puntuaciones");
+                });
+
+            modelBuilder.Entity("efept.Entities.Red", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Enlace")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Redes");
+                });
+
             modelBuilder.Entity("efept.Entities.Tarjeta", b =>
                 {
                     b.Property<int>("Id")
@@ -290,6 +505,108 @@ namespace efept.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("efept.Entities.Comentario", b =>
+                {
+                    b.HasOne("efept.Entities.Post", "Post")
+                        .WithMany("Comentarios")
+                        .HasForeignKey("IdPost")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("efept.Data.ApplicationUser", "Usuario")
+                        .WithMany("Comentarios")
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Post");
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("efept.Entities.EtiquetaLibro", b =>
+                {
+                    b.HasOne("efept.Entities.Etiqueta", "Etiqueta")
+                        .WithMany("Libros")
+                        .HasForeignKey("IdEtiqueta")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("efept.Entities.Libro", "Libro")
+                        .WithMany("Etiquetas")
+                        .HasForeignKey("IdLibro")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Etiqueta");
+
+                    b.Navigation("Libro");
+                });
+
+            modelBuilder.Entity("efept.Entities.EtiquetaPost", b =>
+                {
+                    b.HasOne("efept.Entities.Etiqueta", "Etiqueta")
+                        .WithMany("Posts")
+                        .HasForeignKey("IdEtiqueta")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("efept.Entities.Post", "Post")
+                        .WithMany("Etiquetas")
+                        .HasForeignKey("IdPost")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Etiqueta");
+
+                    b.Navigation("Post");
+                });
+
+            modelBuilder.Entity("efept.Entities.Puntuacion", b =>
+                {
+                    b.HasOne("efept.Data.ApplicationUser", "Usuario")
+                        .WithMany("Puntuaciones")
+                        .HasForeignKey("IdUsuario")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("efept.Entities.Post", "Post")
+                        .WithMany()
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Post");
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("efept.Data.ApplicationUser", b =>
+                {
+                    b.Navigation("Comentarios");
+
+                    b.Navigation("Puntuaciones");
+                });
+
+            modelBuilder.Entity("efept.Entities.Etiqueta", b =>
+                {
+                    b.Navigation("Libros");
+
+                    b.Navigation("Posts");
+                });
+
+            modelBuilder.Entity("efept.Entities.Libro", b =>
+                {
+                    b.Navigation("Etiquetas");
+                });
+
+            modelBuilder.Entity("efept.Entities.Post", b =>
+                {
+                    b.Navigation("Comentarios");
+
+                    b.Navigation("Etiquetas");
                 });
 #pragma warning restore 612, 618
         }

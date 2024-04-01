@@ -4,6 +4,7 @@
     {
         public int Id { get; set; }
         public required string Nombre { get; set; }
-        public required List<EtiquetaPost> Posts { get; set; }
+        public List<EtiquetaPost>? Posts { get; set; }
+        public List<EtiquetaLibro>? Libros { get; set; }
     }
 }

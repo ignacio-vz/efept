@@ -7,6 +7,8 @@ namespace efept.Data
     public class ApplicationUser : IdentityUser
     {
         public required List<Comentario> Comentarios { get; set; }
+
+        public required List<Puntuacion> Puntuaciones { get; set; }
     }
 
 }

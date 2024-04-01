@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `__EFMigrationsHistory` (
+﻿CREATE TABLE IF NOT EXISTS `__EFMigrationsHistory` (
     `MigrationId` varchar(150) CHARACTER SET utf8mb4 NOT NULL,
     `ProductVersion` varchar(32) CHARACTER SET utf8mb4 NOT NULL,
     CONSTRAINT `PK___EFMigrationsHistory` PRIMARY KEY (`MigrationId`)
@@ -33,6 +33,44 @@ CREATE TABLE `AspNetUsers` (
     `LockoutEnabled` tinyint(1) NOT NULL,
     `AccessFailedCount` int NOT NULL,
     CONSTRAINT `PK_AspNetUsers` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+
+CREATE TABLE `Etiquetas` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Nombre` longtext CHARACTER SET utf8mb4 NOT NULL,
+    CONSTRAINT `PK_Etiquetas` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+
+CREATE TABLE `Libros` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Titulo` longtext CHARACTER SET utf8mb4 NOT NULL,
+    `Autor` longtext CHARACTER SET utf8mb4 NULL,
+    `Editorial` longtext CHARACTER SET utf8mb4 NULL,
+    `Ano` int NULL,
+    `Precio` decimal(65,30) NULL,
+    `ISBN` longtext CHARACTER SET utf8mb4 NULL,
+    `Sinopsis` longtext CHARACTER SET utf8mb4 NULL,
+    `Imagen` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_Libros` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+
+CREATE TABLE `Posts` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Cita` longtext CHARACTER SET utf8mb4 NOT NULL,
+    `Categoria` longtext CHARACTER SET utf8mb4 NULL,
+    `Titulo` longtext CHARACTER SET utf8mb4 NULL,
+    `Autor` longtext CHARACTER SET utf8mb4 NULL,
+    `Imagen` longtext CHARACTER SET utf8mb4 NULL,
+    `Texto` longtext CHARACTER SET utf8mb4 NULL,
+    `Puntuacion` int NOT NULL,
+    CONSTRAINT `PK_Posts` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+
+CREATE TABLE `Redes` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Nombre` longtext CHARACTER SET utf8mb4 NOT NULL,
+    `Enlace` longtext CHARACTER SET utf8mb4 NOT NULL,
+    CONSTRAINT `PK_Redes` PRIMARY KEY (`Id`)
 ) CHARACTER SET=utf8mb4;
 
 CREATE TABLE `Tarjetas` (
@@ -87,6 +125,45 @@ CREATE TABLE `AspNetUserTokens` (
     CONSTRAINT `FK_AspNetUserTokens_AspNetUsers_UserId` FOREIGN KEY (`UserId`) REFERENCES `AspNetUsers` (`Id`) ON DELETE CASCADE
 ) CHARACTER SET=utf8mb4;
 
+CREATE TABLE `EtiquetasLibros` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `IdEtiqueta` int NOT NULL,
+    `IdLibro` int NOT NULL,
+    CONSTRAINT `PK_EtiquetasLibros` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_EtiquetasLibros_Etiquetas_IdEtiqueta` FOREIGN KEY (`IdEtiqueta`) REFERENCES `Etiquetas` (`Id`) ON DELETE CASCADE,
+    CONSTRAINT `FK_EtiquetasLibros_Libros_IdLibro` FOREIGN KEY (`IdLibro`) REFERENCES `Libros` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+
+CREATE TABLE `Comentarios` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `IdPost` int NOT NULL,
+    `IdUsuario` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `Texto` longtext CHARACTER SET utf8mb4 NOT NULL,
+    CONSTRAINT `PK_Comentarios` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_Comentarios_AspNetUsers_IdUsuario` FOREIGN KEY (`IdUsuario`) REFERENCES `AspNetUsers` (`Id`) ON DELETE CASCADE,
+    CONSTRAINT `FK_Comentarios_Posts_IdPost` FOREIGN KEY (`IdPost`) REFERENCES `Posts` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+
+CREATE TABLE `EtiquetasPosts` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `IdEtiqueta` int NOT NULL,
+    `IdPost` int NOT NULL,
+    CONSTRAINT `PK_EtiquetasPosts` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_EtiquetasPosts_Etiquetas_IdEtiqueta` FOREIGN KEY (`IdEtiqueta`) REFERENCES `Etiquetas` (`Id`) ON DELETE CASCADE,
+    CONSTRAINT `FK_EtiquetasPosts_Posts_IdPost` FOREIGN KEY (`IdPost`) REFERENCES `Posts` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+
+CREATE TABLE `Puntuaciones` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `IdUsuario` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+    `IdPost` int NOT NULL,
+    `Puntos` int NOT NULL,
+    `PostId` int NOT NULL,
+    CONSTRAINT `PK_Puntuaciones` PRIMARY KEY (`Id`),
+    CONSTRAINT `FK_Puntuaciones_AspNetUsers_IdUsuario` FOREIGN KEY (`IdUsuario`) REFERENCES `AspNetUsers` (`Id`) ON DELETE CASCADE,
+    CONSTRAINT `FK_Puntuaciones_Posts_PostId` FOREIGN KEY (`PostId`) REFERENCES `Posts` (`Id`) ON DELETE CASCADE
+) CHARACTER SET=utf8mb4;
+
 CREATE INDEX `IX_AspNetRoleClaims_RoleId` ON `AspNetRoleClaims` (`RoleId`);
 
 CREATE UNIQUE INDEX `RoleNameIndex` ON `AspNetRoles` (`NormalizedName`);
@@ -101,8 +178,24 @@ CREATE INDEX `EmailIndex` ON `AspNetUsers` (`NormalizedEmail`);
 
 CREATE UNIQUE INDEX `UserNameIndex` ON `AspNetUsers` (`NormalizedUserName`);
 
+CREATE INDEX `IX_Comentarios_IdPost` ON `Comentarios` (`IdPost`);
+
+CREATE INDEX `IX_Comentarios_IdUsuario` ON `Comentarios` (`IdUsuario`);
+
+CREATE INDEX `IX_EtiquetasLibros_IdEtiqueta` ON `EtiquetasLibros` (`IdEtiqueta`);
+
+CREATE INDEX `IX_EtiquetasLibros_IdLibro` ON `EtiquetasLibros` (`IdLibro`);
+
+CREATE INDEX `IX_EtiquetasPosts_IdEtiqueta` ON `EtiquetasPosts` (`IdEtiqueta`);
+
+CREATE INDEX `IX_EtiquetasPosts_IdPost` ON `EtiquetasPosts` (`IdPost`);
+
+CREATE INDEX `IX_Puntuaciones_IdUsuario` ON `Puntuaciones` (`IdUsuario`);
+
+CREATE INDEX `IX_Puntuaciones_PostId` ON `Puntuaciones` (`PostId`);
+
 INSERT INTO `__EFMigrationsHistory` (`MigrationId`, `ProductVersion`)
-VALUES ('20240330160524_TarjetaMigration', '8.0.3');
+VALUES ('20240401153329_Inicial', '8.0.3');
 
 COMMIT;
 

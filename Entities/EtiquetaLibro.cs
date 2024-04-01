@@ -1,11 +1,11 @@
 ﻿namespace efept.Entities
 {
-    public class EtiquetaPost
+    public class EtiquetaLibro
     {
         public int Id { get; set; }
         public int IdEtiqueta { get; set; }
-        public int IdPost { get; set; }
+        public int IdLibro { get; set; }
         public required Etiqueta Etiqueta { get; set; }
-        public required Post Post { get; set; }
+        public required Libro Libro { get; set; }
     }
 }

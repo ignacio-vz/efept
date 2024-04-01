@@ -18,8 +18,16 @@ namespace efept.Data
 
         public DbSet<EtiquetaPost> EtiquetasPosts { get; set; }
 
+        public DbSet<Libro> Libros { get; set; }
+
+        public DbSet<EtiquetaLibro> EtiquetasLibros { get; set; }
+
+        public DbSet<Puntuacion> Puntuaciones { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Comentario>()
                 .HasOne(c => c.Post)
                 .WithMany(p => p.Comentarios)
@@ -31,9 +39,6 @@ namespace efept.Data
                 .HasForeignKey(c => c.IdUsuario);
 
             modelBuilder.Entity<EtiquetaPost>()
-                .HasKey(ep => new { ep.IdEtiqueta, ep.IdPost });
-
-            modelBuilder.Entity<EtiquetaPost>()
                 .HasOne(ep => ep.Etiqueta)
                 .WithMany(e => e.Posts)
                 .HasForeignKey(ep => ep.IdEtiqueta);
@@ -42,6 +47,24 @@ namespace efept.Data
                 .HasOne(ep => ep.Post)
                 .WithMany(p => p.Etiquetas)
                 .HasForeignKey(ep => ep.IdPost);
+
+            modelBuilder.Entity<EtiquetaLibro>()
+                .HasOne(el => el.Etiqueta)
+                .WithMany(e => e.Libros)
+                .HasForeignKey(el => el.IdEtiqueta);
+
+            modelBuilder.Entity<EtiquetaLibro>()
+                .HasOne(el => el.Libro)
+                .WithMany(l => l.Etiquetas)
+                .HasForeignKey(el => el.IdLibro);
+
+            modelBuilder.Entity<Puntuacion>()
+                .HasOne(p => p.Usuario)
+                .WithMany(u => u.Puntuaciones)
+                .HasForeignKey(p => p.IdUsuario);
+
+            modelBuilder.Entity<ApplicationUser>()
+                .HasKey(u => u.Id);
         }
     }
 }

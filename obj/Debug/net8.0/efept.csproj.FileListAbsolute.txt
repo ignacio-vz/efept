@@ -108,3 +108,13 @@ C:\Users\ignac\Proyectos\efept\efept\obj\Debug\net8.0\refint\efept.dll
 C:\Users\ignac\Proyectos\efept\efept\obj\Debug\net8.0\efept.pdb
 C:\Users\ignac\Proyectos\efept\efept\obj\Debug\net8.0\efept.genruntimeconfig.cache
 C:\Users\ignac\Proyectos\efept\efept\obj\Debug\net8.0\ref\efept.dll
+C:\Users\ignac\Proyectos\efept\efept\bin\Debug\net8.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\ignac\Proyectos\efept\efept\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\ignac\Proyectos\efept\efept\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\ignac\Proyectos\efept\efept\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\ignac\Proyectos\efept\efept\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\ignac\Proyectos\efept\efept\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\ignac\Proyectos\efept\efept\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\ignac\Proyectos\efept\efept\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ignac\Proyectos\efept\efept\bin\Debug\net8.0\Microsoft.Extensions.Features.dll
+C:\Users\ignac\Proyectos\efept\efept\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
