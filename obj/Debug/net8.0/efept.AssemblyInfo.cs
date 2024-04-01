@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("efept")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cdc908a838497fecddaa5a7836a5ff389edfa135")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+686d86b393c9c93362f423c6a196a495d297e8f2")]
 [assembly: System.Reflection.AssemblyProductAttribute("efept")]
 [assembly: System.Reflection.AssemblyTitleAttribute("efept")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

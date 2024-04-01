@@ -41,7 +41,8 @@ namespace efept.Services
 
         public async Task<ApplicationUser> UpdateUsuario(int id, ApplicationUser usuario)
         {
-            _context.Entry(usuario).State = EntityState.Modified;
+            usuario.Id = id.ToString();
+            _context.Users.Update(usuario);
             await _context.SaveChangesAsync();
             return usuario;
         }

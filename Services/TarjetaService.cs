@@ -32,7 +32,8 @@ namespace efept.Services
 
         public async Task<Tarjeta> UpdateTarjetaAsync(int id, Tarjeta tarjeta)
         {
-            _context.Entry(tarjeta).State = EntityState.Modified;
+            tarjeta.Id = id;
+            _context.Tarjetas.Update(tarjeta);
             await _context.SaveChangesAsync();
             return tarjeta;
         }

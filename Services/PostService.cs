@@ -57,7 +57,8 @@ namespace efept.Services
 
         public async Task<Post> UpdatePost(int id, Post post)
         {
-            _context.Entry(post).State = EntityState.Modified;
+            post.Id = id;
+            _context.Posts.Update(post);
             await _context.SaveChangesAsync();
             return post;
         }
