@@ -5,6 +5,7 @@ using efept.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using efept.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -66,5 +67,7 @@ app.MapRazorComponents<App>()
 
 // Add additional endpoints required by the Identity /Account Razor components.
 app.MapAdditionalIdentityEndpoints();
+
+app.MapHub<PostHub>("/postHub");
 
 app.Run();
