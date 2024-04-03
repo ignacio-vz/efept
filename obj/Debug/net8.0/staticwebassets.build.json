@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vm+pgXiGRTvuXQD8VJ3AHzwVBbVkIUtjj7+czNmgK00=",
+  "Hash": "POSsi397PI78rPqAhGUbI91s4u10pK2k8n/wc6qiQvA=",
   "Source": "efept",
   "BasePath": "_content/efept",
   "Mode": "Default",
@@ -188,25 +188,6 @@
       "OriginalItemSpec": "wwwroot\\images\\felicidad_600x400.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\instagram_color.svg",
-      "SourceId": "efept",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
-      "BasePath": "_content/efept",
-      "RelativePath": "images/instagram_color.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\instagram_color.svg"
-    },
-    {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\instagram.svg",
       "SourceId": "efept",
       "SourceType": "Discovered",
@@ -224,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\instagram.svg"
+    },
+    {
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\instagram_color.svg",
+      "SourceId": "efept",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
+      "BasePath": "_content/efept",
+      "RelativePath": "images/instagram_color.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\instagram_color.svg"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\linkedin.svg",
@@ -625,25 +625,6 @@
       "OriginalItemSpec": "wwwroot\\images\\tiktok.svg"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\whatsapp_color.svg",
-      "SourceId": "efept",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
-      "BasePath": "_content/efept",
-      "RelativePath": "images/whatsapp_color.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\whatsapp_color.svg"
-    },
-    {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\whatsapp.svg",
       "SourceId": "efept",
       "SourceType": "Discovered",
@@ -661,6 +642,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\whatsapp.svg"
+    },
+    {
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\whatsapp_color.svg",
+      "SourceId": "efept",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
+      "BasePath": "_content/efept",
+      "RelativePath": "images/whatsapp_color.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\whatsapp_color.svg"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\x_blanco.svg",

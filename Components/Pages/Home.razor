@@ -45,11 +45,11 @@
     <div class="contenedor-tarjetas-index">
         @foreach (var Tarjeta in Tarjetas)
         {
-        <div class="tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
-            <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
-            <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
-            <p class="descripcion-tarjeta">@Tarjeta.Descripcion</p>
-        </div>
+            <div @onclick="() => ToCategoria(Tarjeta)" class="tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
+                <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
+                <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
+                <p class="descripcion-tarjeta">@Tarjeta.Descripcion</p>
+            </div>
         }
     </div>
 </div>
@@ -69,8 +69,13 @@
         {
             if (Tarjeta.Descripcion != null && Tarjeta.Descripcion.Length > 24)
             {
-            Tarjeta.Descripcion = string.Join(" ", Tarjeta.Descripcion.Split().Take(24)) + "...";
+                Tarjeta.Descripcion = string.Join(" ", Tarjeta.Descripcion.Split().Take(24)) + "...";
             }
         }
+    }
+
+    private void ToCategoria(Tarjeta tarjeta)
+    {
+        NavigationManager.NavigateTo($"/categoria/{tarjeta.Titulo}");
     }
 }

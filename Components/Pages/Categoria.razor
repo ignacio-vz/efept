@@ -1,2 +1,53 @@
-﻿@page "/{categoria}"
+﻿@page "/categoria/{categoria}"
 @attribute [StreamRendering(true)]
+
+<PageTitle>@categoria</PageTitle>
+
+<div>
+    <div class="contenedor-fondo-categoria">
+        <picture>
+            <source media="(min-width: 1920px)"
+                    srcset="@($"images/{categoria}_1920x1080.webp")">
+            <source media="(min-width: 1280px) and (max-width: 1919px)"
+                    srcset="@($"images/{categoria}_1280x720.webp")">
+            <source media="(min-width: 1024px) and (max-width: 1279px) and (orientation: landscape)"
+                    srcset="@($"images/{categoria}_1024x768.webp")">
+            <source media="(min-width: 768px) and (orientation: portrait)"
+                    srcset="@($"images/{categoria}_768x1024.webp")">
+            <source media="(min-width: 720px) and (max-width: 767px) and (orientation: portrait)"
+                    srcset="@($"images/{categoria}_720x1280.webp")">
+            <source media="(min-width: 640px) and (max-width: 1023px) and (orientation: landscape)"
+                    srcset="@($"images/{categoria}_1136x640.webp")">
+            <source media="(max-width: 719px) and (orientation: portrait)"
+                    srcset="@($"images/{categoria}_480x800.webp")">
+            <source media="(max-width: 639px) and (orientation: landscape)"
+                    srcset="@($"images/{categoria}_568x320.webp")">
+            <img src="@($"images/{categoria}_1280x720.webp")" alt="@categoria" loading="eager"
+                 class="fondo_categoria imagenes">
+        </picture>
+        <div class="contenedor-titulo-categoria">
+            
+        </div>
+        <div class="contenedor-descripcion-categoria">
+
+        </div>
+    </div>
+    <div class="contenedor-contenido-categoria">
+        <div class="box-categoria">
+            <div class="titulo-box-categoria">
+
+            </div>
+            <div class="descripcion-box-categoria">
+
+            </div>
+            <div class="imagen-box-categoria">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string? categoria { get; set; }
+}
