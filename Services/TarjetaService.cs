@@ -23,6 +23,16 @@ namespace efept.Services
             return await _context.Tarjetas.FindAsync(id);
         }
 
+        public async Task<Tarjeta?> GetTarjetaAsync(string titulo)
+        {
+            if (titulo != null)
+            {
+                titulo = titulo.Substring(0, 5).ToUpper();
+                return await _context.Tarjetas.FirstOrDefaultAsync(t => EF.Functions.Like(t.Titulo, $"{titulo}%"));
+            }
+            return null;
+        }
+
         public async Task<Tarjeta> CreateTarjetaAsync(Tarjeta tarjeta)
         {
             _context.Tarjetas.Add(tarjeta);

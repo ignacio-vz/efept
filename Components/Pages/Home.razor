@@ -43,13 +43,21 @@
         </div>
     </div>
     <div class="contenedor-tarjetas-index">
-        @foreach (var Tarjeta in Tarjetas)
+        @if (Tarjetas != null && Tarjetas.Any())
         {
-            <div @onclick="() => ToCategoria(Tarjeta)" class="clicable tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
-                <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
-                <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
-                <p class="descripcion-tarjeta">@Tarjeta.Descripcion</p>
-            </div>
+            foreach (var Tarjeta in Tarjetas)
+            {
+                <div @onclick="() => ToCategoria(Tarjeta)" class="clicable tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
+                    <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
+                    <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
+                    @if (Tarjeta.Descripcion != null)
+                    {
+                        <p class="descripcion-tarjeta">
+                            @string.Join(" ", Tarjeta.Descripcion.Split().Take(24))...
+                        </p>
+                    }
+                </div>
+            }
         }
     </div>
 </div>
@@ -65,18 +73,11 @@
     protected override async Task OnInitializedAsync()
     {
         Tarjetas = await TarjetaService.GetTarjetasAsync();
-        foreach (var Tarjeta in Tarjetas)
-        {
-            if (Tarjeta.Descripcion != null && Tarjeta.Descripcion.Length > 24)
-            {
-                Tarjeta.Descripcion = string.Join(" ", Tarjeta.Descripcion.Split().Take(24)) + "...";
-            }
-        }
     }
 
     private void ToCategoria(Tarjeta tarjeta)
     {
-        var titulo = tarjeta.Titulo.Replace("Í", "I").Split(" ")[0];
+        var titulo = tarjeta.Titulo.Replace("Á", "A").Replace("É", "E").Replace("Í", "I").Replace("Ó", "O").Replace("Ú", "U").Replace("Ü", "U").Replace("Ñ", "N").Split(" ")[0];
         NavigationManager.NavigateTo($"/categoria/{titulo}");
     }
 }

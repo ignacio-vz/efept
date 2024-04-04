@@ -1,5 +1,6 @@
 ﻿@page "/categoria/{categoria}"
 @attribute [StreamRendering(true)]
+@inject ITarjetaService TarjetaService
 
 <PageTitle>@categoria</PageTitle>
 
@@ -26,10 +27,16 @@
                  class="fondo_principal imagenes">
         </picture>
         <div class="contenedor-titulo-categoria">
-            
+            @if(Tarjeta != null)
+            {
+                <h1>@Tarjeta.Titulo</h1>
+            }
         </div>
         <div class="contenedor-descripcion-categoria">
-
+            @if(Tarjeta != null)
+            {
+                <p>@Tarjeta.Descripcion</p>
+            }
         </div>
     </div>
     <div class="contenedor-contenido-categoria">
@@ -50,4 +57,15 @@
 @code {
     [Parameter]
     public string? categoria { get; set; }
+    private Tarjeta? Tarjeta;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (categoria == null)
+        {
+            NavigationManager.NavigateTo("/");
+            return;
+        }
+        Tarjeta = await TarjetaService.GetTarjetaAsync(categoria);
+    }
 }
