@@ -111,8 +111,8 @@ h1:focus {
 
     .contenedor-logo img {
         height: 80px;
-        width: 130px;
-        padding-left: 50px;
+        width: 80px;
+        margin-left: 50px;
     }
 
 .contenedor-navbar-ul {
@@ -130,23 +130,26 @@ h1:focus {
     gap: 20px;
 }
 
-.hamburger-menu {
-    display: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    background-color: transparent;
-    border-width: 0;
-    font-size: xx-large;
-    position: absolute;
-    right: 30px;
-    top: 20px;
-}
+    .navbar-ul-desktop li {
+        cursor: pointer;
+    }
+
+    .hamburger-menu {
+        display: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background-color: transparent;
+        border-width: 0;
+        font-size: xx-large;
+        position: absolute;
+        right: 30px;
+        top: 20px;
+    }
 
 @media (max-width: 768px) {
     .contenedor-logo img {
-        padding-left: 20px;
-        width: 100px;
+        margin-left: 24px;
     }
 
     .hamburger-menu {
@@ -181,6 +184,10 @@ h1:focus {
     white-space: pre-line;
 }
 
+.clicable {
+    cursor: pointer;
+}
+
 /* FOOTER */
 
 .footer {
@@ -205,11 +212,12 @@ h1:focus {
     gap: 10px;
 }
 
-    .navegacion-footer a,
-    .legal a {
+    .navegacion-footer p,
+    .legal p {
         color: white;
         text-decoration: none;
         padding: 5px;
+        cursor: pointer;
     }
 
 .linea-horizontal {

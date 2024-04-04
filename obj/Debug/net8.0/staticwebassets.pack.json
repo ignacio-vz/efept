@@ -9,6 +9,186 @@
       "PackagePath": "staticwebassets\\app.css"
     },
     {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad.png",
+      "PackagePath": "staticwebassets\\images\\Felicidad.png"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_1024x768.webp",
+      "PackagePath": "staticwebassets\\images\\Felicidad_1024x768.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_1136x640.webp",
+      "PackagePath": "staticwebassets\\images\\Felicidad_1136x640.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_1280x720.webp",
+      "PackagePath": "staticwebassets\\images\\Felicidad_1280x720.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_1920x1080.webp",
+      "PackagePath": "staticwebassets\\images\\Felicidad_1920x1080.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_480x800.webp",
+      "PackagePath": "staticwebassets\\images\\Felicidad_480x800.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_568x320.webp",
+      "PackagePath": "staticwebassets\\images\\Felicidad_568x320.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_720x1280.webp",
+      "PackagePath": "staticwebassets\\images\\Felicidad_720x1280.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_768x1024.webp",
+      "PackagePath": "staticwebassets\\images\\Felicidad_768x1024.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad.jpg",
+      "PackagePath": "staticwebassets\\images\\Mentalidad.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_1024x768.webp",
+      "PackagePath": "staticwebassets\\images\\Mentalidad_1024x768.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_1136x640.webp",
+      "PackagePath": "staticwebassets\\images\\Mentalidad_1136x640.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_1280x720.webp",
+      "PackagePath": "staticwebassets\\images\\Mentalidad_1280x720.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_1920x1080.webp",
+      "PackagePath": "staticwebassets\\images\\Mentalidad_1920x1080.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_480x800.webp",
+      "PackagePath": "staticwebassets\\images\\Mentalidad_480x800.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_568x320.webp",
+      "PackagePath": "staticwebassets\\images\\Mentalidad_568x320.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_720x1280.webp",
+      "PackagePath": "staticwebassets\\images\\Mentalidad_720x1280.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_768x1024.webp",
+      "PackagePath": "staticwebassets\\images\\Mentalidad_768x1024.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones.jpg",
+      "PackagePath": "staticwebassets\\images\\Relaciones.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_1024x768.webp",
+      "PackagePath": "staticwebassets\\images\\Relaciones_1024x768.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_1136x640.webp",
+      "PackagePath": "staticwebassets\\images\\Relaciones_1136x640.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_1280x720.webp",
+      "PackagePath": "staticwebassets\\images\\Relaciones_1280x720.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_1920x1080.webp",
+      "PackagePath": "staticwebassets\\images\\Relaciones_1920x1080.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_480x800.webp",
+      "PackagePath": "staticwebassets\\images\\Relaciones_480x800.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_568x320.webp",
+      "PackagePath": "staticwebassets\\images\\Relaciones_568x320.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_720x1280.webp",
+      "PackagePath": "staticwebassets\\images\\Relaciones_720x1280.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_768x1024.webp",
+      "PackagePath": "staticwebassets\\images\\Relaciones_768x1024.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria.jpg",
+      "PackagePath": "staticwebassets\\images\\Sabiduria.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_1024x768.webp",
+      "PackagePath": "staticwebassets\\images\\Sabiduria_1024x768.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_1136x640.webp",
+      "PackagePath": "staticwebassets\\images\\Sabiduria_1136x640.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_1280x720.webp",
+      "PackagePath": "staticwebassets\\images\\Sabiduria_1280x720.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_1920x1080.webp",
+      "PackagePath": "staticwebassets\\images\\Sabiduria_1920x1080.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_480x800.webp",
+      "PackagePath": "staticwebassets\\images\\Sabiduria_480x800.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_568x320.webp",
+      "PackagePath": "staticwebassets\\images\\Sabiduria_568x320.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_720x1280.webp",
+      "PackagePath": "staticwebassets\\images\\Sabiduria_720x1280.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_768x1024.webp",
+      "PackagePath": "staticwebassets\\images\\Sabiduria_768x1024.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud.jpg",
+      "PackagePath": "staticwebassets\\images\\Salud.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_1024x768.webp",
+      "PackagePath": "staticwebassets\\images\\Salud_1024x768.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_1136x640.webp",
+      "PackagePath": "staticwebassets\\images\\Salud_1136x640.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_1280x720.webp",
+      "PackagePath": "staticwebassets\\images\\Salud_1280x720.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_1920x1080.webp",
+      "PackagePath": "staticwebassets\\images\\Salud_1920x1080.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_480x800.webp",
+      "PackagePath": "staticwebassets\\images\\Salud_480x800.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_568x320.webp",
+      "PackagePath": "staticwebassets\\images\\Salud_568x320.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_720x1280.webp",
+      "PackagePath": "staticwebassets\\images\\Salud_720x1280.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_768x1024.webp",
+      "PackagePath": "staticwebassets\\images\\Salud_768x1024.webp"
+    },
+    {
       "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\discord.svg",
       "PackagePath": "staticwebassets\\images\\discord.svg"
     },

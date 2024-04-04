@@ -45,7 +45,7 @@
     <div class="contenedor-tarjetas-index">
         @foreach (var Tarjeta in Tarjetas)
         {
-            <div @onclick="() => ToCategoria(Tarjeta)" class="tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
+            <div @onclick="() => ToCategoria(Tarjeta)" class="clicable tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
                 <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
                 <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
                 <p class="descripcion-tarjeta">@Tarjeta.Descripcion</p>
@@ -76,6 +76,7 @@
 
     private void ToCategoria(Tarjeta tarjeta)
     {
-        NavigationManager.NavigateTo($"/categoria/{tarjeta.Titulo}");
+        var titulo = tarjeta.Titulo.Replace("Í", "I").Split(" ")[0];
+        NavigationManager.NavigateTo($"/categoria/{titulo}");
     }
 }
