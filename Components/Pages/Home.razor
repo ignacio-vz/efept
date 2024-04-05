@@ -2,7 +2,7 @@
 @attribute [StreamRendering(true)]
 @inject ITarjetaService TarjetaService
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Esta frase es para ti</PageTitle>
 
 <div>
     <div class="contenedor-fondo-index">
@@ -79,5 +79,6 @@
     {
         var titulo = tarjeta.Titulo.Replace("Á", "A").Replace("É", "E").Replace("Í", "I").Replace("Ó", "O").Replace("Ú", "U").Replace("Ü", "U").Replace("Ñ", "N").Split(" ")[0];
         NavigationManager.NavigateTo($"/categoria/{titulo}");
+        // AQUÍ AÚN SE PODRÍAN PONER INSTRUCCIONES, PORQUE NAVIGATIONMANAGER LO QUE HACE ES CAMBIAR LA URL, PERO NO HACE NADA MÁS
     }
 }
