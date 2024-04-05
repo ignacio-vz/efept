@@ -1,6 +1,7 @@
 ﻿@page "/categoria/{categoria}"
 @attribute [StreamRendering(true)]
 @inject ITarjetaService TarjetaService
+@inject IPostService PostService
 
 <PageTitle>@categoria</PageTitle>
 
@@ -40,23 +41,30 @@
         </div>
     </div>
     <div class="contenedor-contenido-categoria">
-        <div class="box-categoria">
-            <div class="titulo-box-categoria">
-
-            </div>
-            <div class="descripcion-box-categoria">
-
-            </div>
-            <div class="imagen-box-categoria">
-
-            </div>
-        </div>
+        @if (Posts != null)
+        {
+            foreach (var Post in Posts)
+            {
+                <div class="box-categoria">
+                    <div class="titulo-box-categoria">
+                        <h2>@Post.Titulo</h2>
+                    </div>
+                    <div class="cita-box-categoria">
+                        <p>@Post.Cita</p>
+                    </div>
+                    <div class="imagen-box-categoria">
+                        <img src="@Post.Imagen" alt="@Post.Titulo">
+                    </div>
+                </div>
+            }
+        }
     </div>
 </div>
 
 @code {
     [Parameter]
     public string? categoria { get; set; }
+    private List<efept.Entities.Post>? Posts;
     private Tarjeta? Tarjeta;
 
     protected override async Task OnInitializedAsync()
@@ -67,5 +75,12 @@
             return;
         }
         Tarjeta = await TarjetaService.GetTarjetaAsync(categoria);
+        if (Tarjeta == null)
+        {
+            NavigationManager.NavigateTo("/");
+            return;
+        }
+        Posts = await PostService.GetPostsByCategory(Tarjeta.Titulo);
     }
+
 }
