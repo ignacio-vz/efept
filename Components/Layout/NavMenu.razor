@@ -8,16 +8,32 @@
 <button @onclick="ToggleMenu" id="hamburger-menu" class="hamburger-menu">☰</button>
 <div class="contenedor-navbar-ul">
     <ul class="navbar-ul-desktop">
-        <li>Este blog</li>
-        <li>Sobre mí</li>
-        <li>Contacto</li>
-        <li>Recursos</li>
+        <NavLink href="/blog">
+            <li>Este blog</li>
+        </NavLink>
+        <NavLink href="/sobre-mi">
+            <li>Sobre mí</li>
+        </NavLink>
+        <NavLink href="/contacto">
+            <li>Contacto</li>
+        </NavLink>
+        <NavLink href="/recursos">
+            <li>Recursos</li>
+        </NavLink>
     </ul>
     <ul class="navbar-ul-mobile" style="@EstiloMenu">
-        <li>Este blog</li>
-        <li>Sobre mí</li>
-        <li>Contacto</li>
-        <li>Recursos</li>
+        <NavLink href="/blog">
+            <li>Este blog</li>
+        </NavLink>
+        <NavLink href="/sobre-mi">
+            <li>Sobre mí</li>
+        </NavLink>
+        <NavLink href="/contacto">
+            <li>Contacto</li>
+        </NavLink>
+        <NavLink href="/recursos">
+            <li>Recursos</li>
+        </NavLink>
     </ul>
 </div>
 

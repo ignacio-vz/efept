@@ -194,6 +194,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBYm91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ignac/Proyectos/efept/efept/Components/Pages/Aviso.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBdmlzby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ignac/Proyectos/efept/efept/Components/Pages/Blog.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCbG9nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -204,6 +208,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ignac/Proyectos/efept/efept/Components/Pages/Contacto.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb250YWN0by5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ignac/Proyectos/efept/efept/Components/Pages/Cookies.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb29raWVzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ignac/Proyectos/efept/efept/Components/Pages/Error.razor]
@@ -230,8 +238,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQb3N0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ignac/Proyectos/efept/efept/Components/Pages/Privacidad.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQcml2YWNpZGFkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ignac/Proyectos/efept/efept/Components/Pages/Recursos.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xSZWN1cnNvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ignac/Proyectos/efept/efept/Components/Pages/Terminos.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xUZXJtaW5vcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ignac/Proyectos/efept/efept/Components/Routes.razor]
