@@ -1,7 +1,9 @@
 ﻿@implements IDisposable
 
 <div class="contenedor-logo">
-    <img class="clicable" @onclick="ToHome" src="images/logo_blanco.webp" alt="logo" loading="eager">
+    <NavLink href="/" target="_self">
+        <img src="images/logo_blanco.webp" alt="logo" loading="eager">
+    </NavLink>
 </div>
 <button @onclick="ToggleMenu" id="hamburger-menu" class="hamburger-menu">☰</button>
 <div class="contenedor-navbar-ul">
@@ -45,10 +47,5 @@
     public void Dispose()
     {
         NavigationManager.LocationChanged -= OnLocationChanged;
-    }
-
-    private void ToHome()
-    {
-        NavigationManager.NavigateTo("/");
     }
 }

@@ -107,13 +107,13 @@ h1:focus {
 .contenedor-logo {
     display: flex;
     align-items: center;
+    margin-left: 50px;
 }
 
-    .contenedor-logo img {
-        height: 80px;
-        width: 80px;
-        margin-left: 50px;
-    }
+.contenedor-logo img {
+    height: 80px;
+    width: 80px;
+}
 
 .contenedor-navbar-ul {
     display: flex;
@@ -130,10 +130,6 @@ h1:focus {
     gap: 20px;
 }
 
-    .navbar-ul-desktop li {
-        cursor: pointer;
-    }
-
     .hamburger-menu {
         display: none;
         color: white;
@@ -148,10 +144,6 @@ h1:focus {
     }
 
 @media (max-width: 768px) {
-    .contenedor-logo img {
-        margin-left: 24px;
-    }
-
     .hamburger-menu {
         display: block;
     }
@@ -184,10 +176,6 @@ h1:focus {
     white-space: pre-line;
 }
 
-.clicable {
-    cursor: pointer;
-}
-
 /* FOOTER */
 
 .footer {
@@ -217,7 +205,6 @@ h1:focus {
         color: white;
         text-decoration: none;
         padding: 5px;
-        cursor: pointer;
     }
 
 .linea-horizontal {

@@ -23,12 +23,11 @@ namespace efept.Services
             return await _context.Tarjetas.FindAsync(id);
         }
 
-        public async Task<Tarjeta?> GetTarjetaAsync(string titulo)
+        public async Task<Tarjeta?> GetTarjetaAsync(string tituloNormalizado)
         {
-            if (titulo != null)
-            {
-                titulo = titulo.Substring(0, 5).ToUpper();
-                return await _context.Tarjetas.FirstOrDefaultAsync(t => EF.Functions.Like(t.Titulo, $"{titulo}%"));
+            if (tituloNormalizado != null)
+            { 
+                return await _context.Tarjetas.FirstOrDefaultAsync(t => t.TituloNormalizado == tituloNormalizado);
             }
             return null;
         }

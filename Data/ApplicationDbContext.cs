@@ -65,6 +65,15 @@ namespace efept.Data
 
             modelBuilder.Entity<ApplicationUser>()
                 .HasKey(u => u.Id);
+
+            // Seed data
+            modelBuilder.Entity<Tarjeta>().HasData(
+                new Tarjeta { Id = 1, Titulo = "FELICIDAD", Descripcion = "El ser humano se embarca en una búsqueda incansable hacia la conquista de ese estado pleno y sereno. ¿Qué sabemos sobre la felicidad? ¿A qué conclusiones llegaron los grandes pensadores? En esta sección descubrirás principios de grandes pensadores sobre esta búsqueda atemporal.", Imagen = "images/felicidad_300x200.webp" },
+                new Tarjeta { Id = 2, Titulo = "RELACIONES PERSONALES", Descripcion = "En el tejido mismo de la existencia reside una verdad inquebrantable: la necesidad imperiosa de los demás. Cultivar habilidades para relacionarse con solidez y perspicacia se erige como un conocimiento vital, una sabiduría preclara que los grandes pensadores abrazaron yque ahora exploraremos. Adéntrate en el arte de edificar relaciones más robustas y trascendentes.", Imagen = "images/relaciones-personales_300x200.webp" },
+                new Tarjeta { Id = 3, Titulo = "SALUD", Descripcion = "La salud otorga un valor inigualable a todo lo demás. Nuestro cuerpo nos acompaña a lo largo de toda la travesía vital, y optimizar su cuidado hasta llevarlo a su máxima expresión se erige como un pilar de plenitud y satisfacción. Volvamos la mirada al pasado, pues en él yace la sabiduría para reconectar con nuestro templo físico y alcanzar una vida plena y gratificante.", Imagen = "images/salud_300x200.webp" },
+                new Tarjeta { Id = 4, Titulo = "MENTALIDAD", Descripcion = "Nuestra forma de interactuar con el mundo determina nuestra vida misma. Dominar la gestión emocional y adoptar paradigmas mentales efectivos posee el potencial de transformar de raíz nuestra realidad. En este segmento, nos sumergiremos en las enseñanzas de eminentes pensadores acerca de cómo dirigir el aprendizaje, orquestar las emociones, enfrentar la realidad, instaurar hábitos enriquecedores y mucho más.", Imagen = "images/mentalidad_300x200.webp" },
+                new Tarjeta { Id = 5, Titulo = "SABIDURÍA", Descripcion = "La sabiduría es el conocimiento llevado a la acción. El individuo sabio orienta su entendimiento para tomar decisiones más acertadas, asistir a otros y guiar su propia existencia por rutas más perspicaces y enriquecedoras. Asumamos el legado de los sabios del ayer para así iluminar los senderos de nuestras vidas.", Imagen = "images/sabiduria_300x200.webp" }
+                );
         }
     }
 }

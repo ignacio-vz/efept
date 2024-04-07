@@ -47,16 +47,18 @@
         {
             foreach (var Tarjeta in Tarjetas)
             {
-                <div @onclick="() => ToCategoria(Tarjeta)" class="clicable tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
-                    <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
-                    <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
-                    @if (Tarjeta.Descripcion != null)
-                    {
-                        <p class="descripcion-tarjeta">
-                            @string.Join(" ", Tarjeta.Descripcion.Split().Take(24))...
-                        </p>
-                    }
-                </div>
+                <NavLink href="/categoria/{Tarjeta.TituloNormalizado}" target="_self">
+                    <div class="tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
+                        <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
+                        <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
+                        @if (Tarjeta.Descripcion != null)
+                        {
+                            <p class="descripcion-tarjeta">
+                                @string.Join(" ", Tarjeta.Descripcion.Split().Take(24))...
+                            </p>
+                        }
+                    </div>
+                </NavLink>
             }
         }
     </div>
@@ -73,12 +75,5 @@
     protected override async Task OnInitializedAsync()
     {
         Tarjetas = await TarjetaService.GetTarjetasAsync();
-    }
-
-    private void ToCategoria(Tarjeta tarjeta)
-    {
-        var titulo = tarjeta.Titulo.Replace("Á", "A").Replace("É", "E").Replace("Í", "I").Replace("Ó", "O").Replace("Ú", "U").Replace("Ü", "U").Replace("Ñ", "N").Split(" ")[0];
-        NavigationManager.NavigateTo($"/categoria/{titulo}");
-        // AQUÍ AÚN SE PODRÍAN PONER INSTRUCCIONES, PORQUE NAVIGATIONMANAGER LO QUE HACE ES CAMBIAR LA URL, PERO NO HACE NADA MÁS
     }
 }

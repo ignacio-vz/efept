@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3X3FoKlFS8/S0G7Z6k1Epy5EXiZPqyF3C0ETV6GIygY=",
+  "Hash": "gBTecT5/p064BuO/QRyFGFtwvrOLxUF3kgrqFr3Zrxg=",
   "Source": "efept",
   "BasePath": "_content/efept",
   "Mode": "Default",
@@ -150,12 +150,12 @@
       "OriginalItemSpec": "wwwroot\\images\\favicon_negro.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad.png",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_1024x768.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Felicidad.png",
+      "RelativePath": "images/felicidad_1024x768.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -166,15 +166,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Felicidad.png"
+      "OriginalItemSpec": "wwwroot\\images\\felicidad_1024x768.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_1024x768.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_1136x640.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Felicidad_1024x768.webp",
+      "RelativePath": "images/felicidad_1136x640.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -185,15 +185,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Felicidad_1024x768.webp"
+      "OriginalItemSpec": "wwwroot\\images\\felicidad_1136x640.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_1136x640.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_1280x720.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Felicidad_1136x640.webp",
+      "RelativePath": "images/felicidad_1280x720.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -204,15 +204,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Felicidad_1136x640.webp"
+      "OriginalItemSpec": "wwwroot\\images\\felicidad_1280x720.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_1280x720.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_1920x1080.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Felicidad_1280x720.webp",
+      "RelativePath": "images/felicidad_1920x1080.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -223,26 +223,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Felicidad_1280x720.webp"
-    },
-    {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_1920x1080.webp",
-      "SourceId": "efept",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
-      "BasePath": "_content/efept",
-      "RelativePath": "images/Felicidad_1920x1080.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Felicidad_1920x1080.webp"
+      "OriginalItemSpec": "wwwroot\\images\\felicidad_1920x1080.webp"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_300x200.webp",
@@ -264,12 +245,12 @@
       "OriginalItemSpec": "wwwroot\\images\\felicidad_300x200.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_480x800.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_480x800.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Felicidad_480x800.webp",
+      "RelativePath": "images/felicidad_480x800.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -280,15 +261,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Felicidad_480x800.webp"
+      "OriginalItemSpec": "wwwroot\\images\\felicidad_480x800.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_568x320.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_568x320.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Felicidad_568x320.webp",
+      "RelativePath": "images/felicidad_568x320.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -299,7 +280,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Felicidad_568x320.webp"
+      "OriginalItemSpec": "wwwroot\\images\\felicidad_568x320.webp"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_600x400.webp",
@@ -321,12 +302,12 @@
       "OriginalItemSpec": "wwwroot\\images\\felicidad_600x400.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_720x1280.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_720x1280.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Felicidad_720x1280.webp",
+      "RelativePath": "images/felicidad_720x1280.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -337,15 +318,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Felicidad_720x1280.webp"
+      "OriginalItemSpec": "wwwroot\\images\\felicidad_720x1280.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Felicidad_768x1024.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad_768x1024.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Felicidad_768x1024.webp",
+      "RelativePath": "images/felicidad_768x1024.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -356,15 +337,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Felicidad_768x1024.webp"
+      "OriginalItemSpec": "wwwroot\\images\\felicidad_768x1024.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\instagram.svg",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\felicidad.png",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/instagram.svg",
+      "RelativePath": "images/felicidad.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -375,7 +356,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\instagram.svg"
+      "OriginalItemSpec": "wwwroot\\images\\felicidad.png"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\instagram_color.svg",
@@ -395,6 +376,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\instagram_color.svg"
+    },
+    {
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\instagram.svg",
+      "SourceId": "efept",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
+      "BasePath": "_content/efept",
+      "RelativePath": "images/instagram.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\instagram.svg"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\linkedin.svg",
@@ -454,12 +454,12 @@
       "OriginalItemSpec": "wwwroot\\images\\logo_negro.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad.jpg",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_1024x768.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Mentalidad.jpg",
+      "RelativePath": "images/mentalidad_1024x768.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -470,15 +470,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Mentalidad.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\mentalidad_1024x768.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_1024x768.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_1136x640.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Mentalidad_1024x768.webp",
+      "RelativePath": "images/mentalidad_1136x640.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -489,15 +489,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Mentalidad_1024x768.webp"
+      "OriginalItemSpec": "wwwroot\\images\\mentalidad_1136x640.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_1136x640.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_1280x720.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Mentalidad_1136x640.webp",
+      "RelativePath": "images/mentalidad_1280x720.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -508,15 +508,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Mentalidad_1136x640.webp"
+      "OriginalItemSpec": "wwwroot\\images\\mentalidad_1280x720.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_1280x720.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_1920x1080.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Mentalidad_1280x720.webp",
+      "RelativePath": "images/mentalidad_1920x1080.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -527,26 +527,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Mentalidad_1280x720.webp"
-    },
-    {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_1920x1080.webp",
-      "SourceId": "efept",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
-      "BasePath": "_content/efept",
-      "RelativePath": "images/Mentalidad_1920x1080.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Mentalidad_1920x1080.webp"
+      "OriginalItemSpec": "wwwroot\\images\\mentalidad_1920x1080.webp"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_300x200.webp",
@@ -568,12 +549,12 @@
       "OriginalItemSpec": "wwwroot\\images\\mentalidad_300x200.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_480x800.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_480x800.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Mentalidad_480x800.webp",
+      "RelativePath": "images/mentalidad_480x800.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -584,15 +565,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Mentalidad_480x800.webp"
+      "OriginalItemSpec": "wwwroot\\images\\mentalidad_480x800.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_568x320.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_568x320.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Mentalidad_568x320.webp",
+      "RelativePath": "images/mentalidad_568x320.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -603,7 +584,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Mentalidad_568x320.webp"
+      "OriginalItemSpec": "wwwroot\\images\\mentalidad_568x320.webp"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_600x400.webp",
@@ -625,12 +606,12 @@
       "OriginalItemSpec": "wwwroot\\images\\mentalidad_600x400.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_720x1280.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_720x1280.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Mentalidad_720x1280.webp",
+      "RelativePath": "images/mentalidad_720x1280.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -641,15 +622,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Mentalidad_720x1280.webp"
+      "OriginalItemSpec": "wwwroot\\images\\mentalidad_720x1280.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Mentalidad_768x1024.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad_768x1024.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Mentalidad_768x1024.webp",
+      "RelativePath": "images/mentalidad_768x1024.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -660,7 +641,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Mentalidad_768x1024.webp"
+      "OriginalItemSpec": "wwwroot\\images\\mentalidad_768x1024.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\mentalidad.jpg",
+      "SourceId": "efept",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
+      "BasePath": "_content/efept",
+      "RelativePath": "images/mentalidad.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\mentalidad.jpg"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\principal_1024x768.webp",
@@ -815,12 +815,12 @@
       "OriginalItemSpec": "wwwroot\\images\\principal_768x1024.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones.jpg",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales_1024x768.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Relaciones.jpg",
+      "RelativePath": "images/relaciones-personales_1024x768.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -831,15 +831,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Relaciones.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales_1024x768.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_1024x768.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales_1136x640.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Relaciones_1024x768.webp",
+      "RelativePath": "images/relaciones-personales_1136x640.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -850,15 +850,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Relaciones_1024x768.webp"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales_1136x640.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_1136x640.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales_1280x720.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Relaciones_1136x640.webp",
+      "RelativePath": "images/relaciones-personales_1280x720.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -869,15 +869,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Relaciones_1136x640.webp"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales_1280x720.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_1280x720.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales_1920x1080.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Relaciones_1280x720.webp",
+      "RelativePath": "images/relaciones-personales_1920x1080.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -888,15 +888,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Relaciones_1280x720.webp"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales_1920x1080.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_1920x1080.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales_300x200.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Relaciones_1920x1080.webp",
+      "RelativePath": "images/relaciones-personales_300x200.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -907,15 +907,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Relaciones_1920x1080.webp"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales_300x200.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_480x800.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales_480x800.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Relaciones_480x800.webp",
+      "RelativePath": "images/relaciones-personales_480x800.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -926,15 +926,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Relaciones_480x800.webp"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales_480x800.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_568x320.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales_568x320.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Relaciones_568x320.webp",
+      "RelativePath": "images/relaciones-personales_568x320.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -945,15 +945,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Relaciones_568x320.webp"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales_568x320.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_720x1280.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales_600x400.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Relaciones_720x1280.webp",
+      "RelativePath": "images/relaciones-personales_600x400.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -964,15 +964,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Relaciones_720x1280.webp"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales_600x400.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Relaciones_768x1024.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales_720x1280.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Relaciones_768x1024.webp",
+      "RelativePath": "images/relaciones-personales_720x1280.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -983,15 +983,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Relaciones_768x1024.webp"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales_720x1280.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones_personales_300x200.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales_768x1024.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/relaciones_personales_300x200.webp",
+      "RelativePath": "images/relaciones-personales_768x1024.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1002,15 +1002,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\relaciones_personales_300x200.webp"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales_768x1024.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones_personales_600x400.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\relaciones-personales.jpg",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/relaciones_personales_600x400.webp",
+      "RelativePath": "images/relaciones-personales.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1021,15 +1021,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\relaciones_personales_600x400.webp"
+      "OriginalItemSpec": "wwwroot\\images\\relaciones-personales.jpg"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria.jpg",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_1024x768.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Sabiduria.jpg",
+      "RelativePath": "images/sabiduria_1024x768.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1040,15 +1040,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Sabiduria.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\sabiduria_1024x768.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_1024x768.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_1136x640.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Sabiduria_1024x768.webp",
+      "RelativePath": "images/sabiduria_1136x640.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1059,15 +1059,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Sabiduria_1024x768.webp"
+      "OriginalItemSpec": "wwwroot\\images\\sabiduria_1136x640.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_1136x640.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_1280x720.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Sabiduria_1136x640.webp",
+      "RelativePath": "images/sabiduria_1280x720.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1078,15 +1078,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Sabiduria_1136x640.webp"
+      "OriginalItemSpec": "wwwroot\\images\\sabiduria_1280x720.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_1280x720.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_1920x1080.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Sabiduria_1280x720.webp",
+      "RelativePath": "images/sabiduria_1920x1080.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1097,26 +1097,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Sabiduria_1280x720.webp"
-    },
-    {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_1920x1080.webp",
-      "SourceId": "efept",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
-      "BasePath": "_content/efept",
-      "RelativePath": "images/Sabiduria_1920x1080.webp",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Sabiduria_1920x1080.webp"
+      "OriginalItemSpec": "wwwroot\\images\\sabiduria_1920x1080.webp"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_300x200.webp",
@@ -1138,12 +1119,12 @@
       "OriginalItemSpec": "wwwroot\\images\\sabiduria_300x200.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_480x800.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_480x800.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Sabiduria_480x800.webp",
+      "RelativePath": "images/sabiduria_480x800.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1154,15 +1135,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Sabiduria_480x800.webp"
+      "OriginalItemSpec": "wwwroot\\images\\sabiduria_480x800.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_568x320.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_568x320.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Sabiduria_568x320.webp",
+      "RelativePath": "images/sabiduria_568x320.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1173,7 +1154,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Sabiduria_568x320.webp"
+      "OriginalItemSpec": "wwwroot\\images\\sabiduria_568x320.webp"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_600x400.webp",
@@ -1195,12 +1176,12 @@
       "OriginalItemSpec": "wwwroot\\images\\sabiduria_600x400.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_720x1280.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_720x1280.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Sabiduria_720x1280.webp",
+      "RelativePath": "images/sabiduria_720x1280.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1211,15 +1192,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Sabiduria_720x1280.webp"
+      "OriginalItemSpec": "wwwroot\\images\\sabiduria_720x1280.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Sabiduria_768x1024.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria_768x1024.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Sabiduria_768x1024.webp",
+      "RelativePath": "images/sabiduria_768x1024.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1230,15 +1211,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Sabiduria_768x1024.webp"
+      "OriginalItemSpec": "wwwroot\\images\\sabiduria_768x1024.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud.jpg",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sabiduria.jpg",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Salud.jpg",
+      "RelativePath": "images/sabiduria.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1249,15 +1230,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Salud.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\sabiduria.jpg"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_1024x768.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_1024x768.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Salud_1024x768.webp",
+      "RelativePath": "images/salud_1024x768.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1268,15 +1249,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Salud_1024x768.webp"
+      "OriginalItemSpec": "wwwroot\\images\\salud_1024x768.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_1136x640.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_1136x640.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Salud_1136x640.webp",
+      "RelativePath": "images/salud_1136x640.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1287,15 +1268,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Salud_1136x640.webp"
+      "OriginalItemSpec": "wwwroot\\images\\salud_1136x640.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_1280x720.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_1280x720.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Salud_1280x720.webp",
+      "RelativePath": "images/salud_1280x720.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1306,15 +1287,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Salud_1280x720.webp"
+      "OriginalItemSpec": "wwwroot\\images\\salud_1280x720.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_1920x1080.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_1920x1080.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Salud_1920x1080.webp",
+      "RelativePath": "images/salud_1920x1080.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1325,7 +1306,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Salud_1920x1080.webp"
+      "OriginalItemSpec": "wwwroot\\images\\salud_1920x1080.webp"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_300x200.webp",
@@ -1347,12 +1328,12 @@
       "OriginalItemSpec": "wwwroot\\images\\salud_300x200.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_480x800.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_480x800.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Salud_480x800.webp",
+      "RelativePath": "images/salud_480x800.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1363,15 +1344,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Salud_480x800.webp"
+      "OriginalItemSpec": "wwwroot\\images\\salud_480x800.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_568x320.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_568x320.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Salud_568x320.webp",
+      "RelativePath": "images/salud_568x320.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1382,7 +1363,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Salud_568x320.webp"
+      "OriginalItemSpec": "wwwroot\\images\\salud_568x320.webp"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_600x400.webp",
@@ -1404,12 +1385,12 @@
       "OriginalItemSpec": "wwwroot\\images\\salud_600x400.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_720x1280.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_720x1280.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Salud_720x1280.webp",
+      "RelativePath": "images/salud_720x1280.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1420,15 +1401,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Salud_720x1280.webp"
+      "OriginalItemSpec": "wwwroot\\images\\salud_720x1280.webp"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\Salud_768x1024.webp",
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud_768x1024.webp",
       "SourceId": "efept",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
       "BasePath": "_content/efept",
-      "RelativePath": "images/Salud_768x1024.webp",
+      "RelativePath": "images/salud_768x1024.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1439,7 +1420,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\Salud_768x1024.webp"
+      "OriginalItemSpec": "wwwroot\\images\\salud_768x1024.webp"
+    },
+    {
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\salud.jpg",
+      "SourceId": "efept",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
+      "BasePath": "_content/efept",
+      "RelativePath": "images/salud.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\salud.jpg"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\telegram.svg",
@@ -1480,25 +1480,6 @@
       "OriginalItemSpec": "wwwroot\\images\\tiktok.svg"
     },
     {
-      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\whatsapp.svg",
-      "SourceId": "efept",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
-      "BasePath": "_content/efept",
-      "RelativePath": "images/whatsapp.svg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\whatsapp.svg"
-    },
-    {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\whatsapp_color.svg",
       "SourceId": "efept",
       "SourceType": "Discovered",
@@ -1516,6 +1497,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\whatsapp_color.svg"
+    },
+    {
+      "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\whatsapp.svg",
+      "SourceId": "efept",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\",
+      "BasePath": "_content/efept",
+      "RelativePath": "images/whatsapp.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\whatsapp.svg"
     },
     {
       "Identity": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\x_blanco.svg",
