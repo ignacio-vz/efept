@@ -47,7 +47,7 @@
         {
             foreach (var Tarjeta in Tarjetas)
             {
-                <NavLink href="/categoria/{Tarjeta.TituloNormalizado}" target="_self">
+                <NavLink href="@($"/categoria/{Tarjeta.TituloNormalizado}")" target="_self">
                     <div class="tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
                         <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
                         <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
