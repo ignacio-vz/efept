@@ -159,6 +159,10 @@ a {
         display: block;
     }
 
+    .contenedor-logo {
+        margin-left: 30px;
+    }
+
     .navbar-ul-desktop {
         display: none;
     }
@@ -300,7 +304,7 @@ a {
     color: white;
     text-align: center;
     z-index: 2;
-    font-size: xxx-large;
+    font-size: 48px;
 }
 
 .contenedor-tarjetas-index {

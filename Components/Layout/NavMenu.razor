@@ -1,37 +1,37 @@
 ﻿@implements IDisposable
 
 <div class="contenedor-logo">
-    <NavLink href="/" target="_self">
+    <NavLink href="/" target="_self" @onclick="CerrarMenu">
         <img src="images/logo_blanco.webp" alt="logo" loading="eager">
     </NavLink>
 </div>
 <button @onclick="ToggleMenu" id="hamburger-menu" class="hamburger-menu">☰</button>
 <div class="contenedor-navbar-ul">
     <ul class="navbar-ul-desktop">
-        <NavLink href="/blog">
+        <NavLink href="/blog" target="_self">
             <li>Este blog</li>
         </NavLink>
-        <NavLink href="/sobre-mi">
+        <NavLink href="/sobre-mi" target="_self">
             <li>Sobre mí</li>
         </NavLink>
-        <NavLink href="/contacto">
+        <NavLink href="/contacto" target="_self">
             <li>Contacto</li>
         </NavLink>
-        <NavLink href="/recursos">
+        <NavLink href="/recursos" target="_self">
             <li>Recursos</li>
         </NavLink>
     </ul>
     <ul class="navbar-ul-mobile" style="@EstiloMenu">
-        <NavLink href="/blog">
+        <NavLink href="/blog" target="_self" @onclick="ToggleMenu">
             <li>Este blog</li>
         </NavLink>
-        <NavLink href="/sobre-mi">
+        <NavLink href="/sobre-mi" target="_self" @onclick="ToggleMenu">
             <li>Sobre mí</li>
         </NavLink>
-        <NavLink href="/contacto">
+        <NavLink href="/contacto" target="_self" @onclick="ToggleMenu">
             <li>Contacto</li>
         </NavLink>
-        <NavLink href="/recursos">
+        <NavLink href="/recursos" target="_self" @onclick="ToggleMenu">
             <li>Recursos</li>
         </NavLink>
     </ul>
@@ -46,6 +46,14 @@
     private void ToggleMenu()
     {
         MenuVisible = !MenuVisible;
+    }
+
+    private void CerrarMenu()
+    {
+        if (MenuVisible)
+        {
+            MenuVisible = false;
+        }
     }
 
     protected override void OnInitialized()

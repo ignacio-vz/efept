@@ -47,8 +47,8 @@
         {
             foreach (var Tarjeta in Tarjetas)
             {
-                <NavLink href="@($"/categoria/{Tarjeta.TituloNormalizado}")" target="_self">
-                    <div class="tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
+                <div class="tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
+                    <NavLink href="@($"/categoria/{Tarjeta.TituloNormalizado}")" target="_self">
                         <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
                         <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
                         @if (Tarjeta.Descripcion != null)
@@ -57,8 +57,9 @@
                                 @string.Join(" ", Tarjeta.Descripcion.Split().Take(24))...
                             </p>
                         }
-                    </div>
-                </NavLink>
+                    </NavLink>
+                </div>
+
             }
         }
     </div>
