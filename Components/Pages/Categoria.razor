@@ -27,15 +27,10 @@
             <img src="@($"images/{categoria}_1280x720.webp")" alt="@categoria" loading="eager"
                  class="fondo_principal imagenes">
         </picture>
-        <div class="contenedor-titulo-categoria">
-            @if(Tarjeta != null)
+        <div class="titulos-fondo-index">
+            @if (Tarjeta != null)
             {
                 <h1>@Tarjeta.Titulo</h1>
-            }
-        </div>
-        <div class="contenedor-descripcion-categoria">
-            @if(Tarjeta != null)
-            {
                 <p>@Tarjeta.Descripcion</p>
             }
         </div>

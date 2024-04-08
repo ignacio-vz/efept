@@ -305,6 +305,7 @@ a {
     text-align: center;
     z-index: 2;
     font-size: 48px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .contenedor-tarjetas-index {
