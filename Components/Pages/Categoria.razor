@@ -35,21 +35,17 @@
             }
         </div>
     </div>
-    <div class="contenedor-contenido-categoria">
+    <div class="contenedor-tarjetas-index">
         @if (Posts != null)
         {
             foreach (var Post in Posts)
             {
-                <div class="box-categoria">
-                    <div class="titulo-box-categoria">
-                        <h2>@Post.Titulo</h2>
-                    </div>
-                    <div class="cita-box-categoria">
-                        <p>@Post.Cita</p>
-                    </div>
-                    <div class="imagen-box-categoria">
-                        <img src="@Post.Imagen" alt="@Post.Titulo">
-                    </div>
+                <div class="tarjeta">
+                    <NavLink href="@($"/post/{Post.Categoria}/{Post.Id}")" target="_self">
+                        <img src="@Post.Imagen" alt="@Post.Titulo" loading="lazy" class="imagen-tarjeta">
+                        <h3 class="titulo-tarjeta">@Post.Titulo</h3>
+                        <p class="descripcion-tarjeta">@Post.Cita</p>
+                    </NavLink>
                 </div>
             }
         }
@@ -75,7 +71,7 @@
             NavigationManager.NavigateTo("/");
             return;
         }
-        Posts = await PostService.GetPostsByCategory(Tarjeta.Titulo);
+        Posts = await PostService.GetPostsByCategory(Tarjeta.TituloNormalizado!);
     }
 
 }
