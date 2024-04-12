@@ -1,13 +1,35 @@
 ﻿@page "/post/{categoria}/{id}"
 @attribute [StreamRendering(true)]
+@inject IPostService PostService
 
-@Categoria
-@Id
+<PageTitle>Esta frase es para ti</PageTitle>
 
+@if (post != null)
+{
+    <div class="contenedor-post">
+        <h2>@post.Titulo</h2>
+        <h3>@post.Cita</h3>
+        <div class="contenedor-texto-post">
+            <p>@post.Texto</p>
+            <img src="@post.Imagen" alt="@post.Titulo" />
+        </div>
+    </div>
+}
 
 @code {
     [Parameter]
     public string? Categoria { get; set; }
     [Parameter]
     public string? Id { get; set; }
+
+    private efept.Entities.Post? post;
+
+    protected override async Task OnInitializedAsync()
+    {
+        post = await PostService.GetPost(Convert.ToInt32(Id));
+        if (post == null)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
 }
