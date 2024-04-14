@@ -57,6 +57,10 @@ a {
     color: white;
 }
 
+.aliceblue {
+    background-color: aliceblue;
+}
+
 /* IMÁGENES */
 
 @media (min-width: 1920px) {
@@ -305,7 +309,7 @@ a {
     text-align: center;
     z-index: 2;
     font-size: 48px;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #d2d2d2, 1px -1px 0 #d2d2d2, -1px 1px 0 #d2d2d2, 1px 1px 0 #d2d2d2;
 }
 
 .contenedor-tarjetas-index {
@@ -314,7 +318,8 @@ a {
     justify-content: center;
     gap: 60px;
     max-width: 1386px;
-    margin: 80px auto;
+    margin: 0 auto;
+    padding: 80px 0;
 }
 
 .tarjeta {
@@ -323,6 +328,7 @@ a {
     width: 300px;
     margin: 0 60px;
     text-align: center;
+    background-color: white;
 }
 
 .imagen-tarjeta {
@@ -487,4 +493,48 @@ a {
         .titulos-fondo-index p {
             display: none;
         }
+}
+
+/* POST */
+
+.contenedor-post {
+    padding: 40px;
+    background-color: aliceblue;
+    min-height: inherit;
+}
+
+.contenedor-post h2, .contenedor-post h3 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contenedor-post h3 {
+    margin: 30px 0;
+    font-style: italic;
+}
+
+.contenedor-texto-post {
+    overflow: auto;
+    text-align: justify;
+}
+
+.contenedor-texto-post img {
+    float: left;
+    margin: 0 30px 20px 0;
+    height: fit-content;
+    width: fit-content;
+    max-width: 50%;
+}
+
+@media (max-width: 768px) {
+    .contenedor-post {
+        padding: 20px;
+    }
+
+    .contenedor-texto-post img {
+        float: none;
+        margin: 0 auto 20px auto;
+        display: block;
+        max-width: 100%;
+    }
 }
