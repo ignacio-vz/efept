@@ -1,6 +1,9 @@
 ﻿@page "/post/{categoria}/{id}"
 @attribute [StreamRendering(true)]
 @inject IPostService PostService
+@inject IComentarioService ComentarioService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@using System.Security.Claims;
 
 <PageTitle>Esta frase es para ti</PageTitle>
 
@@ -13,6 +16,34 @@
             <img class="imagen-post" src="@post.Imagen" alt="@post.Titulo" />
             @post.Texto
         </div>
+        <div class="contenedor-comentarios">
+            <h4>Comentarios</h4>
+            @if(post.Comentarios != null && post.Comentarios.Count > 0)
+            {
+                @foreach (var comentario in post.Comentarios)
+                {
+                    <div class="contenedor-comentario">
+                        <h5 class="usuario-comentario">@comentario.Usuario.UserName</h5>
+                        <p class="texto-comentario">@comentario.Texto</p>
+                    </div>
+                }
+            }
+            <AuthorizeView>
+                <Authorized Context="authContext">
+                    <EditForm Model="@post" OnValidSubmit="@AgregarComentario">
+                        <ChildContent Context="commentFormContext">
+                            <InputText id="Texto" @bind-Value="NuevoComentario" />
+                            <button type="submit">Enviar</button>
+                        </ChildContent>
+                    </EditForm>
+                </Authorized>
+                <NotAuthorized>
+                    <p>Para comentar debes iniciar sesión</p>
+                </NotAuthorized>
+            </AuthorizeView>
+
+
+        </div>
     </div>
 }
 
@@ -24,12 +55,28 @@
 
     private efept.Entities.Post? post;
 
+    private string? NuevoComentario { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
         post = await PostService.GetPost(Convert.ToInt32(Id));
         if (post == null)
         {
             NavigationManager.NavigateTo("/");
+        }
+    }
+
+    private async Task AgregarComentario()
+    {
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+        var userId = user.FindFirstValue(ClaimTypes.NameIdentifier);
+
+        if (NuevoComentario != null)
+        {
+            await ComentarioService.AddComentario(post.Id, NuevoComentario, userId);
+            NuevoComentario = null;
+            post.Comentarios = await ComentarioService.GetComentariosByPost(post.Id);
         }
     }
 }

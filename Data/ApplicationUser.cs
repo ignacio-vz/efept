@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using efept.Entities;
+using System.Security.Claims;
 
 namespace efept.Data
 {

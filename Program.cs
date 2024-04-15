@@ -43,6 +43,7 @@ builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSe
 
 builder.Services.AddScoped<ITarjetaService, TarjetaService>();
 builder.Services.AddScoped<IPostService, PostService>();
+builder.Services.AddScoped<IComentarioService, ComentarioService>();
 
 var app = builder.Build();
 
