@@ -39,7 +39,13 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
-builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
+builder.Services.AddSingleton<IEmailSender<ApplicationUser>, EmailSender>(
+    serviceProvider => new EmailSender(
+    smtpServer: builder.Configuration["Smtp:Server"]!,
+    smtpPort: int.Parse(builder.Configuration["Smtp:Port"]!),
+    smtpUsername: builder.Configuration["Smtp:Username"]!,
+    smtpPassword: builder.Configuration["Smtp:Password"]!
+    ));
 
 builder.Services.AddScoped<ITarjetaService, TarjetaService>();
 builder.Services.AddScoped<IPostService, PostService>();
