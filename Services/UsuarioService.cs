@@ -58,5 +58,13 @@ namespace efept.Services
             await _context.SaveChangesAsync();
             return usuario;
         }
+
+        public async Task<ApplicationUser?> ModifyUserName(ApplicationUser user, string newName)
+        {
+            user.UserName = newName;
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return user;
+        }
     }
 }

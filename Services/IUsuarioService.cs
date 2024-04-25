@@ -11,5 +11,6 @@ namespace efept.Services
         Task<ApplicationUser?> GetUsuarioByCorreo(string correo);
         Task<ApplicationUser> UpdateUsuario(int id, ApplicationUser usuario);
         Task<ApplicationUser?> DeleteUsuario(int id);
+        Task<ApplicationUser?> ModifyUserName(ApplicationUser user, string newName);
     }
 }

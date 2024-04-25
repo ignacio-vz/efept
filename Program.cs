@@ -50,6 +50,7 @@ builder.Services.AddSingleton<IEmailSender<ApplicationUser>, EmailSender>(
 builder.Services.AddScoped<ITarjetaService, TarjetaService>();
 builder.Services.AddScoped<IPostService, PostService>();
 builder.Services.AddScoped<IComentarioService, ComentarioService>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 var app = builder.Build();
 

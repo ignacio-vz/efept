@@ -1,4 +1,5 @@
-﻿@implements IDisposable
+﻿@inject AuthenticationStateProvider AuthenticationStateProvider
+@implements IDisposable
 
 <div class="contenedor-logo">
     <NavLink href="/" target="_self" @onclick="CerrarMenu">
@@ -20,6 +21,27 @@
         <NavLink href="/recursos" target="_self">
             <li>Recursos</li>
         </NavLink>
+        <AuthorizeView>
+            <Authorized>
+                <NavLink href="/Account/Profile" target="_self">
+                    <li>@context.User.Identity?.Name</li>
+                </NavLink>
+                <form method="post" action="Account/Logout">
+                    <AntiforgeryToken />
+                    <input type="hidden" name="returnUrl" value="" />
+                    <button class="boton-cerrar-sesion" type="submit">Cerrar sesión</button>
+                </form>
+            </Authorized>
+            <NotAuthorized>
+                <NavLink href="/Account/Register" target="_self">
+                    <li>Registro</li>
+                </NavLink>
+                <NavLink href="/Account/Login" target="_self">
+                    <li>Login</li>
+                </NavLink>
+            </NotAuthorized>
+        </AuthorizeView>
+        
     </ul>
     <ul class="navbar-ul-mobile" style="@EstiloMenu">
         <NavLink href="/blog" target="_self" @onclick="ToggleMenu">

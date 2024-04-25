@@ -10,13 +10,19 @@
 @inject NavigationManager NavigationManager
 @inject IdentityRedirectManager RedirectManager
 
-<PageTitle>Register confirmation</PageTitle>
+<PageTitle>Confirmación de registro</PageTitle>
+<div class="aliceblue contenedor-confirmacion-registro">
+    <h1>Confirmación de registro</h1>
 
-<h1>Register confirmation</h1>
-
-<StatusMessage Message="@statusMessage" />
-
-<p>Please check your email to confirm your account.</p>
+    @if (statusMessage is null)
+    {
+        <p>Le hemos enviado un correo electrónico con un enlace de confirmación. Por favor, revise su correo electrónico.</p>
+    }
+    else
+    {
+        <p>@statusMessage</p>
+    }
+</div>
 
 @code {
     private string? statusMessage;
@@ -41,7 +47,7 @@
         if (user is null)
         {
             HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
-            statusMessage = "Error finding user for unspecified email";
+            statusMessage = "Error al encontrar el usuario para el correo electrónico especificado. Revise el correo electrónico introducido. Si el error persiste, póngase en contacto con el administrador del sitio web.";
         }
     }
 }
