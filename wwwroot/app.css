@@ -601,7 +601,36 @@ a {
     padding: 40px;
 }
 
-    .contenedor-confirmacion-registro p {
+.contenedor-confirmacion-registro p {
         font-size: 20px;
         text-align: justify;
+}
+
+.error-login {
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+.error-login > div {
+    color: firebrick;
+}
+
+.opciones-login {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+    .opciones-login a {
+        color: #4c4c8b;
     }
+
+.margin-auto {
+    margin: auto;
+}
+
+.info-confirmacion-correo {
+    gap: 20px;
+    padding: 40px;
+    text-align: center;
+}
