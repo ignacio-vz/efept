@@ -25,8 +25,8 @@ builder.Services.AddAuthentication(options =>
     })
     .AddIdentityCookies();
 
-var dbUser = builder.Configuration["Uid_efept"];
-var dbPassword = builder.Configuration["Pwd_efept"];
+var dbUser = Environment.GetEnvironmentVariable("Uid_efept");
+var dbPassword = Environment.GetEnvironmentVariable("Pwd_efept");
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 connectionString += $"Uid={dbUser};Pwd={dbPassword};";
 
@@ -39,12 +39,15 @@ builder.Services.AddIdentityCore<ApplicationUser>(options => options.SignIn.Requ
     .AddSignInManager()
     .AddDefaultTokenProviders();
 
+var smtp_Username = Environment.GetEnvironmentVariable("Smtp_Username");
+var smtp_Password = Environment.GetEnvironmentVariable("Smtp_Password");
+
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, EmailSender>(
     serviceProvider => new EmailSender(
     smtpServer: builder.Configuration["Smtp:Server"]!,
     smtpPort: int.Parse(builder.Configuration["Smtp:Port"]!),
-    smtpUsername: builder.Configuration["Smtp:Username"]!,
-    smtpPassword: builder.Configuration["Smtp:Password"]!
+    smtpUsername: smtp_Username!,
+    smtpPassword: smtp_Password!
     ));
 
 builder.Services.AddScoped<ITarjetaService, TarjetaService>();

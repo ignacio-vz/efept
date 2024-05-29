@@ -1,4 +1,5 @@
 ﻿using efept.Data;
+using efept.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace efept.Services
@@ -24,7 +25,7 @@ namespace efept.Services
             return await _context.Users.ToListAsync();
         }
 
-        public async Task<ApplicationUser?> GetUsuario(int id)
+        public async Task<ApplicationUser?> GetUsuario(string id)
         {
             return await _context.Users.FindAsync(id);
         }
@@ -62,6 +63,14 @@ namespace efept.Services
         public async Task<ApplicationUser?> ModifyUserName(ApplicationUser user, string newName)
         {
             user.UserName = newName;
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+            return user;
+        }
+
+        public async Task<ApplicationUser?> ModifyNormalizedUserName(ApplicationUser user)
+        {
+            user.NormalizedUserName = user.Email!.ToUpper();
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
             return user;

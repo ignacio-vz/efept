@@ -2,8 +2,10 @@
 @attribute [StreamRendering(true)]
 @inject IPostService PostService
 @inject IComentarioService ComentarioService
+@inject IUsuarioService UsuarioService
 @inject AuthenticationStateProvider AuthenticationStateProvider
 @using System.Security.Claims;
+@using efept.Entities;
 
 <PageTitle>Esta frase es para ti</PageTitle>
 
@@ -18,12 +20,15 @@
         </div>
         <div class="contenedor-comentarios">
             <h4>Comentarios</h4>
-            @if(post.Comentarios != null && post.Comentarios.Count > 0)
+            @if (comentarios != null && comentarios.Count > 0)
             {
-                @foreach (var comentario in post.Comentarios)
+                foreach (var comentario in comentarios)
                 {
+                    var usuario = usuarios?.FirstOrDefault(u => u.Id == comentario.IdUsuario);
+                    var nombreUsuario = usuario != null ? usuario.UserName : "Usuario desconocido";
+
                     <div class="contenedor-comentario">
-                        <h5 class="usuario-comentario">@comentario.Usuario.UserName</h5>
+                        <h5 class="usuario-comentario">@nombreUsuario</h5>
                         <p class="texto-comentario">@comentario.Texto</p>
                     </div>
                 }
@@ -41,8 +46,6 @@
                     <p>Para comentar debes iniciar sesión</p>
                 </NotAuthorized>
             </AuthorizeView>
-
-
         </div>
     </div>
 }
@@ -54,6 +57,8 @@
     public string? Id { get; set; }
 
     private efept.Entities.Post? post;
+    private List<Comentario>? comentarios;
+    private List<ApplicationUser>? usuarios;
 
     private string? NuevoComentario { get; set; }
 
@@ -63,7 +68,25 @@
         if (post == null)
         {
             NavigationManager.NavigateTo("/");
+            return;
         }
+        comentarios = await ComentarioService.GetComentariosByPost(post.Id);
+        usuarios = await ObtenerUsuariosDeComentarios(comentarios);
+    }
+
+    private async Task<List<ApplicationUser>> ObtenerUsuariosDeComentarios(List<Comentario> comentarios)
+    {
+        var idsUsuarios = comentarios.Select(c => c.IdUsuario).Distinct();
+        var usuarios = new List<ApplicationUser>();
+        foreach (var idUsuario in idsUsuarios)
+        {
+            var usuario = await UsuarioService.GetUsuario(idUsuario);
+            if (usuario != null)
+            {
+                usuarios.Add(usuario);
+            }
+        }
+        return usuarios;
     }
 
     private async Task AgregarComentario()
@@ -76,7 +99,8 @@
         {
             await ComentarioService.AddComentario(post.Id, NuevoComentario, userId);
             NuevoComentario = null;
-            post.Comentarios = await ComentarioService.GetComentariosByPost(post.Id);
+            comentarios = await ComentarioService.GetComentariosByPost(post.Id);
+            usuarios = await ObtenerUsuariosDeComentarios(comentarios);
         }
     }
 }

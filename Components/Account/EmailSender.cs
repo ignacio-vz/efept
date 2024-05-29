@@ -22,17 +22,17 @@ namespace efept.Components.Account
 
         public Task SendConfirmationLinkAsync(ApplicationUser user, string email, string confirmationLink)
         {
-            return SendEmailAsync(email, "Confirm your email", $"Please confirm your email by clicking this link: <a href=\"{confirmationLink}\">{confirmationLink}</a>");
+            return SendEmailAsync(email, "Confirma tu email", $"Por favor, confirma tu email hacinedo click en este enlace: <a href=\"{confirmationLink}\">{confirmationLink}</a>");
         }
 
         public Task SendPasswordResetCodeAsync(ApplicationUser user, string email, string resetCode)
         {
-            return SendEmailAsync(email, "Reset your password", $"Please reset your password by entering this code: {resetCode}");
+            return SendEmailAsync(email, "Reset your password", $"Por favor, resetea tu contraseña insertando este código: {resetCode}");
         }
 
         public Task SendPasswordResetLinkAsync(ApplicationUser user, string email, string resetLink)
         {
-            return SendEmailAsync(email, "Reset your password", $"Please reset your password by clicking this link: <a href=\"{resetLink}\">{resetLink}</a>");
+            return SendEmailAsync(email, "Reset your password", $"Por favor, resetea tu contraseña haciendo click en este enlace: <a href=\"{resetLink}\">{resetLink}</a>");
         }
 
         private async Task SendEmailAsync(string toEmail, string subject, string message)
