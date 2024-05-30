@@ -13,5 +13,7 @@ namespace efept.Services
         Task<ApplicationUser?> DeleteUsuario(int id);
         Task<ApplicationUser?> ModifyUserName(ApplicationUser user, string newName);
         Task<ApplicationUser?> ModifyNormalizedUserName(ApplicationUser user);
+        Task<string> GetUserName(ApplicationUser user);
+        Task<string> GetUserEmail(ApplicationUser user);
     }
 }

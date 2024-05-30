@@ -75,5 +75,25 @@ namespace efept.Services
             await _context.SaveChangesAsync();
             return user;
         }
+
+        public async Task<string> GetUserName(ApplicationUser user)
+        {
+            var usuario = await _context.Users.FindAsync(user.Id);
+            if (usuario != null)
+            {
+                return usuario.UserName!;
+            }
+            return "No se ha encontrado el usuario";
+        }
+
+        public async Task<string> GetUserEmail(ApplicationUser user)
+        {
+            var usuario = await _context.Users.FindAsync(user.Id);
+            if (usuario != null)
+            {
+                return usuario.Email!;
+            }   
+            return "No se ha encontrado el usuario";
+        }
     }
 }

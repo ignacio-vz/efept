@@ -97,10 +97,13 @@
 
         if (NuevoComentario != null)
         {
-            await ComentarioService.AddComentario(post.Id, NuevoComentario, userId);
-            NuevoComentario = null;
-            comentarios = await ComentarioService.GetComentariosByPost(post.Id);
-            usuarios = await ObtenerUsuariosDeComentarios(comentarios);
+            if (userId != null)
+            {
+                await ComentarioService.AddComentario(post!.Id, NuevoComentario, userId);
+                NuevoComentario = null;
+                comentarios = await ComentarioService.GetComentariosByPost(post.Id);
+                usuarios = await ObtenerUsuariosDeComentarios(comentarios);
+            }
         }
     }
 }

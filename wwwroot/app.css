@@ -634,3 +634,9 @@ a {
     padding: 40px;
     text-align: center;
 }
+
+/* PERFIL */
+.center-red {
+    color: red;
+    align-self: center;
+}

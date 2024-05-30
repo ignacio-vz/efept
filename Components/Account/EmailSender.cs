@@ -27,12 +27,12 @@ namespace efept.Components.Account
 
         public Task SendPasswordResetCodeAsync(ApplicationUser user, string email, string resetCode)
         {
-            return SendEmailAsync(email, "Reset your password", $"Por favor, resetea tu contraseña insertando este código: {resetCode}");
+            return SendEmailAsync(email, "Recupera tu contraseña", $"Por favor, resetea tu contraseña insertando este código: {resetCode}");
         }
 
         public Task SendPasswordResetLinkAsync(ApplicationUser user, string email, string resetLink)
         {
-            return SendEmailAsync(email, "Reset your password", $"Por favor, resetea tu contraseña haciendo click en este enlace: <a href=\"{resetLink}\">{resetLink}</a>");
+            return SendEmailAsync(email, "Recupera tu contraseña", $"Por favor, resetea tu contraseña haciendo click en este enlace: <a href=\"{resetLink}\">{resetLink}</a>");
         }
 
         private async Task SendEmailAsync(string toEmail, string subject, string message)

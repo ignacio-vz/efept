@@ -1,0 +1,118 @@
+﻿@page "/Account/Profile"
+@attribute [Authorize]
+
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Components.Authorization
+@inject UserManager<ApplicationUser> UserManager
+@inject IdentityRedirectManager RedirectManager
+@inject IUsuarioService UsuarioService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<PageTitle>Perfil</PageTitle>
+
+<div class="aliceblue">
+    <div class="contenedor-registro">
+        <EditForm class="contenedor-formulario-registro" Model="Input" OnValidSubmit="CambiarPassword" FormName="perfil">
+            <DataAnnotationsValidator />
+            <h1 class="titulo-registro">Registro</h1>
+            <div class="contenedor-elemento-registro">
+                <InputText @bind-Value="Input.UserName" aria-required="true" placeholder="Nombre" disabled />
+                <label for="username">Nombre</label>
+            </div>
+            <div class="contenedor-elemento-registro">
+                <InputText @bind-Value="Input.Email" aria-required="true" placeholder="nombre@dominio.com" disabled />
+                <label for="email">Correo electrónico</label>
+            </div>
+            <div class="contenedor-elemento-registro">
+                <InputText type="password" @bind-Value="Input.CurrentPassword" aria-required="true" placeholder="contraseña actual" />
+                <label for="password">Contraseña actual</label>
+                <ValidationMessage For="() => Input.CurrentPassword" />
+            </div>
+            <div class="contenedor-elemento-registro">
+                <InputText type="password" @bind-Value="Input.Password" aria-required="true" placeholder="nueva contraseña" />
+                <label for="password">Nueva contraseña</label>
+                <ValidationMessage For="() => Input.Password" />
+            </div>
+            <div class="contenedor-elemento-registro">
+                <InputText type="password" @bind-Value="Input.ConfirmPassword" aria-required="true" placeholder="nueva contraseña" />
+                <label for="confirm-password">Confirma la nueva contraseña</label>
+                <ValidationMessage For="() => Input.ConfirmPassword" />
+            </div>
+            <div class="center-red">
+                @Message
+            </div>
+            <button class="boton-registro" type="submit">Cambiar contraseña</button>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private InputModel Input { get; set; } = new();
+
+    private string Message = "";
+
+    private ApplicationUser? User { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        var appUser = await UserManager.GetUserAsync(user);
+        if (appUser is null)
+        {
+            RedirectManager.RedirectTo("Account/InvalidPasswordReset");
+            return;
+        }
+
+        User = appUser;
+
+        Input.UserName = await UsuarioService.GetUserName(User);
+        Input.Email = await UsuarioService.GetUserEmail(User);
+    }
+
+    private async Task CambiarPassword()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        var appUser = await UserManager.GetUserAsync(user);
+        if (appUser is null)
+        {
+            RedirectManager.RedirectTo("Account/InvalidPasswordReset");
+            return;
+        }
+
+        var result = await UserManager.ChangePasswordAsync(appUser, Input.CurrentPassword, Input.Password);
+        if (result.Succeeded)
+        {
+            Message = "";
+            await UsuarioService.ModifyNormalizedUserName(appUser);
+            RedirectManager.RedirectTo("Account/ResetPasswordConfirmation");
+        }
+        else
+        {
+            Message = "La contraseña actual no es correcta.";
+        }
+    }
+
+    private sealed class InputModel
+    {
+        [Required(ErrorMessage = "Es obligatorio introducir una contraseña actual")]
+        public string CurrentPassword { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Es obligatorio introducir una nueva contraseña")]
+        [MinLength(6, ErrorMessage = "La nueva contraseña debe tener al menos 6 caracteres")]
+        public string Password { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Es obligatorio confirmar la nueva contraseña")]
+        [Compare("Password", ErrorMessage = "Las contraseñas no coinciden")]
+        public string ConfirmPassword { get; set; } = string.Empty;
+
+        public string UserName { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+    }
+
+}
