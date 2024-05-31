@@ -230,6 +230,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xKdWVnby5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ignac/Proyectos/efept/efept/Components/Pages/Panel.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQYW5lbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ignac/Proyectos/efept/efept/Components/Pages/Perfil.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xQZXJmaWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

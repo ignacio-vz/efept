@@ -1,0 +1,83 @@
+﻿@page "/panel"
+@attribute [StreamRendering(true)]
+@inject IPostService PostService
+
+<PageTitle>Panel de administración</PageTitle>
+
+<div class="aliceblue">
+    <h1>Panel de administración</h1>
+
+    <div>
+        <h2>Crear nuevo post</h2>
+        <EditForm Model="@post" OnValidSubmit="@HandleValidSubmit">
+            <div>
+                <label for="Titulo">Título</label>
+                <InputText id="Titulo" @bind-Value="post.Titulo" />
+            </div>
+            <div>
+                <label for="Cita">Cita</label>
+                <InputText id="Cita" @bind-Value="post.Cita" />
+            </div>
+            <div>
+                <label for="Categoria">Categoría</label>
+                <InputText id="Categoria" @bind-Value="post.Categoria" />
+            </div>
+            <div>
+                <label for="Autor">Autor</label>
+                <InputText id="Autor" @bind-Value="post.Autor" />
+            </div>
+            <div>
+                <label for="Imagen">Imagen</label>
+                <InputText id="Imagen" @bind-Value="post.Imagen" />
+            </div>
+            <div>
+                <label for="Texto">Texto</label>
+                <InputText id="Texto" @bind-Value="post.Texto" />
+            </div>
+            <button type="submit">Crear</button>
+        </EditForm>
+    </div>
+
+    <div>
+        <h2>Posts</h2>
+        @if (posts != null && posts.Count > 0)
+        {
+            foreach (var post in posts)
+            {
+                <div>
+                    <h3>@post.Titulo</h3>
+                    <p>@post.Cita</p>
+                    <p>@post.Categoria</p>
+                    <button @onclick="() => DeletePost(post.Id)">Eliminar</button>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No hay posts</p>
+        }
+    </div>
+</div>
+
+@code {
+    private List<efept.Entities.Post>? posts;
+    private efept.Entities.Post post = new efept.Entities.Post();
+
+    protected override async Task OnInitializedAsync()
+    {
+        posts = await PostService.GetPosts();
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        await PostService.CreatePost(post);
+        post = new efept.Entities.Post();
+        posts = await PostService.GetPosts();
+    }
+
+    private async Task DeletePost(int id)
+    {
+        await PostService.DeletePost(id);
+        posts = await PostService.GetPosts();
+    }
+}
