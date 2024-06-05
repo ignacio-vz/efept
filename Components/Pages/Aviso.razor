@@ -1,2 +1,24 @@
 ﻿@page "/aviso-legal"
 @attribute [StreamRendering(true)]
+
+<PageTitle>Aviso Legal</PageTitle>
+
+<div class="aliceblue">
+    <div class="contenedor-confirmacion-registro gap0">
+        <h1 class="titulo-registro">Aviso Legal</h1>
+        <div class="info-confirmacion-correo">
+            <p class="respetar-saltos">
+                @aviso.texto
+            </p>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Legal aviso;
+
+    protected override async Task OnInitializedAsync()
+    {
+        aviso = await LegalService.GetLegal("aviso");
+    }
+}

@@ -640,3 +640,9 @@ a {
     color: red;
     align-self: center;
 }
+
+/* EXTRAS */
+
+.gap0 {
+    gap: 0;
+}
