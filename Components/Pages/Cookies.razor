@@ -1,2 +1,30 @@
 ﻿@page "/politica-de-cookies"
 @attribute [StreamRendering(true)]
+
+@using efept.Entities
+@inject ILegalService LegalService
+
+<PageTitle>Política de Cookies</PageTitle>
+
+<div class="aliceblue">
+    <div class="contenedor-confirmacion-registro gap0">
+        <h1 class="titulo-registro">Política de Cookies</h1>
+        <div class="info-confirmacion-correo">
+            <p class="respetar-saltos">
+                @if (cookies != null)
+                {
+                    @cookies.Texto
+                }
+            </p>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Legal? cookies;
+
+    protected override async Task OnInitializedAsync()
+    {
+        cookies = await LegalService.GetLegal("cookies");
+    }
+}

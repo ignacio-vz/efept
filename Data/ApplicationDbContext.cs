@@ -24,6 +24,8 @@ namespace efept.Data
 
         public DbSet<Puntuacion> Puntuaciones { get; set; }
 
+        public DbSet<Legal> Legales { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -65,6 +67,10 @@ namespace efept.Data
 
             modelBuilder.Entity<ApplicationUser>()
                 .HasKey(u => u.Id);
+
+            modelBuilder.Entity<Legal>()
+                .HasIndex(l => l.Nombre)
+                .IsUnique();
 
             // Seed data
             modelBuilder.Entity<Tarjeta>().HasData(

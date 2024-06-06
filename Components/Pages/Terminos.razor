@@ -1,2 +1,30 @@
 ﻿@page "/terminos-y-condiciones"
 @attribute [StreamRendering(true)]
+
+@using efept.Entities
+@inject ILegalService LegalService
+
+<PageTitle>Términos y Condiciones</PageTitle>
+
+<div class="aliceblue">
+    <div class="contenedor-confirmacion-registro gap0">
+        <h1 class="titulo-registro">Términos y Condiciones</h1>
+        <div class="info-confirmacion-correo">
+            <p class="respetar-saltos">
+                @if (terminos != null)
+                {
+                    @terminos.Texto
+                }
+            </p>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Legal? terminos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        terminos = await LegalService.GetLegal("terminos");
+    }
+}

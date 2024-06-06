@@ -1,2 +1,30 @@
 ﻿@page "/politica-de-privacidad"
 @attribute [StreamRendering(true)]
+
+@using efept.Entities
+@inject ILegalService LegalService
+
+<PageTitle>Política de Privacidad</PageTitle>
+
+<div class="aliceblue">
+    <div class="contenedor-confirmacion-registro gap0">
+        <h1 class="titulo-registro">Política de Privacidad</h1>
+        <div class="info-confirmacion-correo">
+            <p class="respetar-saltos">
+                @if (privacidad != null)
+                {
+                    @privacidad.Texto
+                }
+            </p>
+        </div>
+    </div>
+</div>
+
+@code {
+    private Legal? privacidad;
+
+    protected override async Task OnInitializedAsync()
+    {
+        privacidad = await LegalService.GetLegal("privacidad");
+    }
+}

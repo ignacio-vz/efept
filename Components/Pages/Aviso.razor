@@ -1,6 +1,9 @@
 ﻿@page "/aviso-legal"
 @attribute [StreamRendering(true)]
 
+@using efept.Entities
+@inject ILegalService LegalService
+
 <PageTitle>Aviso Legal</PageTitle>
 
 <div class="aliceblue">
@@ -8,14 +11,17 @@
         <h1 class="titulo-registro">Aviso Legal</h1>
         <div class="info-confirmacion-correo">
             <p class="respetar-saltos">
-                @aviso.texto
+                @if(aviso != null)
+                {
+                    @aviso.Texto
+                }
             </p>
         </div>
     </div>
 </div>
 
 @code {
-    private Legal aviso;
+    private Legal? aviso;
 
     protected override async Task OnInitializedAsync()
     {
