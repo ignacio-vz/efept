@@ -38,7 +38,6 @@ namespace efept.Services
         public async Task<Legal> UpdateLegal(int id, Legal legal)
         {
             var legalEntity = await _context.Legales.FindAsync(id) ?? throw new Exception("Legal not found");
-            legalEntity.Nombre = legal.Nombre;
             legalEntity.Descripcion = legal.Descripcion;
             legalEntity.Texto = legal.Texto;
             _context.Legales.Update(legalEntity);

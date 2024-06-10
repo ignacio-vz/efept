@@ -61,6 +61,10 @@ a {
     background-color: aliceblue;
 }
 
+.black {
+    color: black;
+}
+
 /* IMÁGENES */
 
 @media (min-width: 1920px) {

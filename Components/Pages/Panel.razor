@@ -1,6 +1,7 @@
 ﻿@page "/panel"
 @attribute [StreamRendering(true)]
 @inject IPostService PostService
+@inject ILegalService LegalService
 
 <PageTitle>Panel de administración</PageTitle>
 
@@ -8,8 +9,21 @@
     <h1>Panel de administración</h1>
 
     <div>
+        <h2>Editar textos legales</h2>
+        @if (legales != null && legales.Count > 0)
+        {
+            foreach (var legal in legales)
+            {
+                <div>
+                    <a class="black" href="/editar-legal/@legal.Nombre">@legal.Descripcion</a>
+                </div>
+            }
+        }
+    </div>
+
+    <div>
         <h2>Crear nuevo post</h2>
-        <EditForm Model="@post" OnValidSubmit="@HandleValidSubmit">
+        <EditForm Model="@post" OnValidSubmit="@HandleValidSubmitPost">
             <div>
                 <label for="Titulo">Título</label>
                 <InputText id="Titulo" @bind-Value="post.Titulo" />
@@ -62,13 +76,15 @@
 @code {
     private List<efept.Entities.Post>? posts;
     private efept.Entities.Post post = new efept.Entities.Post();
+    private List<Legal>? legales;
 
     protected override async Task OnInitializedAsync()
     {
         posts = await PostService.GetPosts();
+        legales = await LegalService.GetLegales();
     }
 
-    private async Task HandleValidSubmit()
+    private async Task HandleValidSubmitPost()
     {
         await PostService.CreatePost(post);
         post = new efept.Entities.Post();

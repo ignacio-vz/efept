@@ -80,6 +80,13 @@ namespace efept.Data
                 new Tarjeta { Id = 4, Titulo = "MENTALIDAD", Descripcion = "Nuestra forma de interactuar con el mundo determina nuestra vida misma. Dominar la gestión emocional y adoptar paradigmas mentales efectivos posee el potencial de transformar de raíz nuestra realidad. En este segmento, nos sumergiremos en las enseñanzas de eminentes pensadores acerca de cómo dirigir el aprendizaje, orquestar las emociones, enfrentar la realidad, instaurar hábitos enriquecedores y mucho más.", Imagen = "images/mentalidad_300x200.webp" },
                 new Tarjeta { Id = 5, Titulo = "SABIDURÍA", Descripcion = "La sabiduría es el conocimiento llevado a la acción. El individuo sabio orienta su entendimiento para tomar decisiones más acertadas, asistir a otros y guiar su propia existencia por rutas más perspicaces y enriquecedoras. Asumamos el legado de los sabios del ayer para así iluminar los senderos de nuestras vidas.", Imagen = "images/sabiduria_300x200.webp" }
                 );
+
+            modelBuilder.Entity<Legal>().HasData(
+                new Legal { Id = 1, Nombre = "aviso", Descripcion = "Aviso legal", Texto = "Texto del aviso legal" },
+                new Legal { Id = 2, Nombre = "privacidad", Descripcion = "Política de privacidad", Texto = "Texto de la política de privacidad" },
+                new Legal { Id = 3, Nombre = "cookies", Descripcion = "Política de cookies", Texto = "Texto de la política de cookies" },
+                new Legal { Id = 4, Nombre = "terminos", Descripcion = "Términos y condiciones", Texto = "Texto de los términos y condiciones" }
+                );
         }
     }
 }

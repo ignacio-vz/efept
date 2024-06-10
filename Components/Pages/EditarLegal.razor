@@ -1,0 +1,68 @@
+﻿@page "/editar-legal/{nombre}"
+@attribute [StreamRendering(true)]
+
+@using efept.Entities
+
+@inject ILegalService LegalService
+@inject NavigationManager Navigation
+
+<PageTitle>Editar texto legal</PageTitle>
+
+<div class="aliceblue">
+    <div class="contenedor-confirmacion-registro gap0">
+        @if (legal != null)
+        {
+            <EditForm Model="@legal" OnValidSubmit="HandleValidSubmit">
+                <div>
+                    <label for="Titulo">Título</label>
+                    <InputText id="Titulo" @bind-Value="legal.Descripcion" />
+                </div>
+                <div>
+                    <label for="Texto">Texto</label>
+                    <InputText id="Texto" @bind-Value="legal.Texto" />
+                </div>
+                <button type="submit">Guardar</button>
+            </EditForm>
+        }
+        else
+        {
+            <p>Cargando...</p>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string? nombre { get; set; }
+
+    private int Id;
+
+    private Legal? legal;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (nombre != null)
+        {
+            legal = await LegalService.GetLegal(nombre);
+            if (legal != null)
+            {
+                Id = legal.Id;
+            }
+        }
+        else
+        {
+            Navigation.NavigateTo("/panel");
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (legal == null)
+        {
+            return;
+        }
+        await LegalService.UpdateLegal(Id, legal);
+        Navigation.NavigateTo("/panel");
+        return;
+    }
+}
