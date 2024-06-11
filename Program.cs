@@ -55,6 +55,7 @@ builder.Services.AddScoped<IPostService, PostService>();
 builder.Services.AddScoped<IComentarioService, ComentarioService>();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<ILegalService, LegalService>();
+builder.Services.AddScoped<IAboutService, AboutService>();
 
 var app = builder.Build();
 

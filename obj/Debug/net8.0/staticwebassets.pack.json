@@ -297,6 +297,14 @@
       "PackagePath": "staticwebassets\\images\\salud_768x1024.webp"
     },
     {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sobre-mi_1280x720.webp",
+      "PackagePath": "staticwebassets\\images\\sobre-mi_1280x720.webp"
+    },
+    {
+      "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\sobre-mi_1920x1080.webp",
+      "PackagePath": "staticwebassets\\images\\sobre-mi_1920x1080.webp"
+    },
+    {
       "Id": "C:\\Users\\ignac\\Proyectos\\efept\\efept\\wwwroot\\images\\telegram.svg",
       "PackagePath": "staticwebassets\\images\\telegram.svg"
     },

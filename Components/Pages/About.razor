@@ -1,2 +1,42 @@
 ﻿@page "/sobre-mi"
 @attribute [StreamRendering(true)]
+
+@inject IAboutService AboutService
+
+<PageTitle>Sobre mí</PageTitle>
+
+<div class="aliceblue">
+    <div class="contenedor-confirmacion-registro gap0">
+        <h1 class="titulo-registro">
+            @if (about != null && about.Titulo != null)
+            {
+                @about.Titulo
+            }
+            </h1>
+        <div class="info-confirmacion-correo">
+            @if (about != null && about.ImagenG != null && about.Titulo != null)
+            {
+                <picture>
+                    <source media="(min-width: 1920px)" srcset="@about.ImagenG">
+                    <source media="(max-width: 1919px)" srcset="@about.ImagenM">
+                    <img src="@about.ImagenM" alt="@about.Titulo" loading="eager">
+                </picture>
+            }
+            <p class="respetar-saltos">
+                @if (about != null && about.Texto != null)
+                {
+                    @about.Texto
+                }
+            </p>
+        </div>
+    </div>
+</div>
+
+@code {
+    private efept.Entities.About? about;
+
+    protected override async Task OnInitializedAsync()
+    {
+        about = await AboutService.GetAbout();
+    }
+}
