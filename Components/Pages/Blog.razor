@@ -1,2 +1,42 @@
 ﻿@page "/blog"
 @attribute [StreamRendering(true)]
+
+@inject IBlogService BlogService
+
+<PageTitle>Este blog</PageTitle>
+
+<div class="aliceblue">
+    <div class="contenedor-confirmacion-registro gap0">
+        <h1 class="titulo-registro">
+            @if (blog != null && blog.Titulo != null)
+            {
+                @blog.Titulo
+            }
+        </h1>
+        <div class="info-confirmacion-correo">
+            @if (blog != null && blog.ImagenG != null && blog.Titulo != null)
+            {
+                <picture>
+                    <source media="(min-width: 1920px)" srcset="@blog.ImagenG">
+                    <source media="(max-width: 1919px)" srcset="@blog.ImagenM">
+                    <img src="@blog.ImagenM" alt="@blog.Titulo" loading="eager">
+                </picture>
+            }
+            <p class="respetar-saltos">
+                @if (blog != null && blog.Texto != null)
+                {
+                    @blog.Texto
+                }
+            </p>
+        </div>
+    </div>
+</div>
+
+@code {
+    private efept.Entities.Blog? blog;
+
+    protected override async Task OnInitializedAsync()
+    {
+        blog = await BlogService.GetBlog();
+    }
+}
