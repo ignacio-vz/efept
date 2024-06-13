@@ -2,11 +2,29 @@
 @attribute [StreamRendering(true)]
 @inject IPostService PostService
 @inject ILegalService LegalService
+@inject IAboutService AboutService
+@inject IBlogService BlogService
 
 <PageTitle>Panel de administración</PageTitle>
 
 <div class="aliceblue">
     <h1>Panel de administración</h1>
+
+    <div>
+        <h2>Apartado "Sobre mí"</h2>
+        @if (about != null)
+        {
+            <a class="black" href="/editar-about-blog/about">Editar</a>
+        }
+    </div>
+
+    <div>
+        <h2>Apartado "Este blog"</h2>
+        @if (blog != null)
+        {
+            <a class="black" href="/editar-about-blog/blog">Editar</a>
+        }
+    </div>
 
     <div>
         <h2>Editar textos legales</h2>
@@ -77,11 +95,15 @@
     private List<efept.Entities.Post>? posts;
     private efept.Entities.Post post = new efept.Entities.Post();
     private List<Legal>? legales;
+    private efept.Entities.About? about;
+    private efept.Entities.Blog? blog;
 
     protected override async Task OnInitializedAsync()
     {
         posts = await PostService.GetPosts();
         legales = await LegalService.GetLegales();
+        about = await AboutService.GetAbout();
+        blog = await BlogService.GetBlog();
     }
 
     private async Task HandleValidSubmitPost()

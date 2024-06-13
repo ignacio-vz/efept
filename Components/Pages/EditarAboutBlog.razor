@@ -1,0 +1,103 @@
+﻿@page "/editar-about-blog/{nombre}"
+@attribute [StreamRendering(true)]
+
+@using efept.Entities
+
+@inject IAboutService AboutService
+@inject IBlogService BlogService
+@inject NavigationManager Navigation
+
+<PageTitle>Editar texto</PageTitle>
+
+<div class="aliceblue">
+    <div class="contenedor-confirmacion-registro gap0">
+        @if (about != null)
+        {
+            <EditForm Model="@about" OnValidSubmit="HandleValidSubmit">
+                <div>
+                    <label for="Titulo">Título</label>
+                    <InputText @bind-Value="about.Titulo" />
+                </div>
+                <div>
+                    <label for="Texto">Texto</label>
+                    <InputText @bind-Value="about.Texto" />
+                </div>
+                <div>
+                    <label for="Imagen">Imagen grande</label>
+                    <InputText @bind-Value="about.ImagenG" />
+                </div>
+                <div>
+                    <label for="Imagen">Imagen mediana</label>
+                    <InputText @bind-Value="about.ImagenM" />
+                </div>
+                <button type="submit">Guardar</button>
+            </EditForm>
+        }
+        else if (blog != null)
+        {
+            <EditForm Model="@blog" OnValidSubmit="HandleValidSubmit">
+                <div>
+                    <label for="Titulo">Título</label>
+                    <InputText @bind-Value="blog.Titulo" />
+                </div>
+                <div>
+                    <label for="Texto">Texto</label>
+                    <InputText @bind-Value="blog.Texto" />
+                </div>
+                <div>
+                    <label for="Imagen">Imagen grande</label>
+                    <InputText @bind-Value="blog.ImagenG" />
+                </div>
+                <div>
+                    <label for="Imagen">Imagen mediana</label>
+                    <InputText @bind-Value="blog.ImagenM" />
+                </div>
+                <button type="submit">Guardar</button>
+            </EditForm>
+        }
+        else
+        {
+            <p>Cargando...</p>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string? nombre { get; set; }
+
+    private efept.Entities.About? about;
+    private efept.Entities.Blog? blog;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (nombre != null)
+        {
+            if (nombre == "about")
+            {
+                about = await AboutService.GetAbout();
+            }
+            else if (nombre == "blog")
+            {
+                blog = await BlogService.GetBlog();
+            }
+        }
+        else
+        {
+            Navigation.NavigateTo("/panel");
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (about != null)
+        {
+            await AboutService.UpdateAbout(about);
+        }
+        else if (blog != null)
+        {
+            await BlogService.UpdateBlog(blog);
+        }
+        Navigation.NavigateTo("/panel");
+    }
+    }
