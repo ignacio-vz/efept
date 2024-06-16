@@ -1,2 +1,75 @@
 ﻿@page "/contacto"
 @attribute [StreamRendering(true)]
+@using System.ComponentModel.DataAnnotations
+@using System.Text
+@inject NavigationManager Navigation
+@inject ICorreoService CorreoService
+
+<PageTitle>Contacto</PageTitle>
+
+<div class="aliceblue">
+    <div class="contenedor-registro">
+        <EditForm class="contenedor-formulario-registro" Model="@contactForm" OnValidSubmit="HandleValidSubmit">
+            <h1 class="titulo-registro">Contacto</h1>
+            <div class="contenedor-elemento-registro">
+                <InputText id="nombreContacto" @bind-Value="contactForm.Name" aria-required="true" />
+                <label for="nombreContacto">Nombre</label>
+                <ValidationMessage For="@(() => contactForm.Name)" />
+            </div>
+            <div class="contenedor-elemento-registro">
+                <InputText id="emailContacto" type="email" @bind-Value="contactForm.Email" aria-required="true" />
+                <label for="emailContacto">Correo electrónico</label>
+                <ValidationMessage For="@(() => contactForm.Email)" />
+            </div>
+            <div class="contenedor-elemento-registro">
+                <InputText id="asuntoContacto" @bind-Value="contactForm.Subject" aria-required="true" />
+                <label for="asuntoContacto">Asunto</label>
+                <ValidationMessage For="@(() => contactForm.Subject)" />
+            </div>
+            <div class="contenedor-elemento-registro">
+                <InputText id="mensajeContacto" @bind-Value="contactForm.Message" aria-required="true" />
+                <label for="mensajeContacto">Mensaje</label>
+                <ValidationMessage For="@(() => contactForm.Message)" />
+            </div>
+            <button class="boton-registro" type="submit">Enviar</button>
+        </EditForm>
+    </div>
+</div>
+
+
+@code {
+    private ContactForm contactForm = new ContactForm();
+
+    private async Task HandleValidSubmit()
+    {
+        var correo = Environment.GetEnvironmentVariable("Smtp_Username");
+        if (string.IsNullOrEmpty(correo))
+        {
+            throw new InvalidOperationException("El nombre de usuario SMTP no está configurado.");
+        }
+        var mensaje = new StringBuilder();
+        var asunto = contactForm.Subject!;
+        mensaje.AppendLine($"<p>Nombre: {contactForm.Name}</p>");
+        mensaje.AppendLine($"<p>Correo electrónico: {contactForm.Email}</p>");
+        mensaje.AppendLine($"<p>{contactForm.Message}</p>");
+        await CorreoService.SendEmailAsync(correo, asunto, mensaje.ToString());
+        Navigation.NavigateTo("/");
+        return;
+    }
+
+    public class ContactForm
+    {
+        [Required(ErrorMessage = "El nombre es obligatorio")]
+        public string? Name { get; set; }
+
+        [Required(ErrorMessage = "El correo electrónico es obligatorio")]
+        [EmailAddress(ErrorMessage = "Correo electrónico no válido")]
+        public string? Email { get; set; }
+
+        [Required(ErrorMessage = "El asunto es obligatorio")]
+        public string? Subject { get; set; }
+
+        [Required(ErrorMessage = "El mensaje es obligatorio")]
+        public string? Message { get; set; }
+    }
+}
