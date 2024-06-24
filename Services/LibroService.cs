@@ -61,5 +61,10 @@ namespace efept.Services
             await _context.SaveChangesAsync();
             return l;
         }
+
+        public async Task<List<Libro>> GetLibrosByCategoria(string categoria)
+        {
+            return await _context.Libros.Where(l => l.Categoria == categoria).ToListAsync();
+        }
     }
 }

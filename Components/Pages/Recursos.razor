@@ -1,5 +1,6 @@
 ﻿@page "/recursos"
 @attribute [StreamRendering(true)]
+@inject ITarjetaService TarjetaService
 
 <PageTitle>Recursos</PageTitle>
 
@@ -12,4 +13,34 @@
         <img src="images/recursos_1280x720.webp" alt="fondo_principal" loading="eager"
              class="fondo_principal imagenes">
     </picture>
+    <div class="contenedor-tarjetas-index">
+        @if (Tarjetas != null && Tarjetas.Any())
+        {
+            foreach (var Tarjeta in Tarjetas)
+            {
+                <div class="tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
+                    <NavLink href="@($"/recursos/{Tarjeta.TituloNormalizado}")" target="_self">
+                        <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
+                        <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
+                        @if (Tarjeta.Descripcion != null)
+                        {
+                            <p class="descripcion-tarjeta">
+                                @string.Join(" ", Tarjeta.Descripcion.Split().Take(24))...
+                            </p>
+                        }
+                    </NavLink>
+                </div>
+            }
+        }
+    </div>
 </div>
+
+@code {
+
+    private List<Tarjeta> Tarjetas = new List<Tarjeta>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Tarjetas = await TarjetaService.GetTarjetasAsync();
+    }
+}

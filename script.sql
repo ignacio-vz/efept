@@ -11,6 +11,15 @@ START TRANSACTION;
 
 ALTER DATABASE CHARACTER SET utf8mb4;
 
+CREATE TABLE `About` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Titulo` longtext CHARACTER SET utf8mb4 NULL,
+    `Texto` longtext CHARACTER SET utf8mb4 NULL,
+    `ImagenG` longtext CHARACTER SET utf8mb4 NULL,
+    `ImagenM` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_About` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+
 CREATE TABLE `AspNetRoles` (
     `Id` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
     `Name` varchar(256) CHARACTER SET utf8mb4 NULL,
@@ -38,16 +47,34 @@ CREATE TABLE `AspNetUsers` (
     CONSTRAINT `PK_AspNetUsers` PRIMARY KEY (`Id`)
 ) CHARACTER SET=utf8mb4;
 
+CREATE TABLE `Blog` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Titulo` longtext CHARACTER SET utf8mb4 NULL,
+    `Texto` longtext CHARACTER SET utf8mb4 NULL,
+    `ImagenG` longtext CHARACTER SET utf8mb4 NULL,
+    `ImagenM` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_Blog` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+
 CREATE TABLE `Etiquetas` (
     `Id` int NOT NULL AUTO_INCREMENT,
     `Nombre` longtext CHARACTER SET utf8mb4 NOT NULL,
     CONSTRAINT `PK_Etiquetas` PRIMARY KEY (`Id`)
 ) CHARACTER SET=utf8mb4;
 
+CREATE TABLE `Legales` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `Nombre` varchar(255) CHARACTER SET utf8mb4 NULL,
+    `Descripcion` longtext CHARACTER SET utf8mb4 NULL,
+    `Texto` longtext CHARACTER SET utf8mb4 NULL,
+    CONSTRAINT `PK_Legales` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+
 CREATE TABLE `Libros` (
     `Id` int NOT NULL AUTO_INCREMENT,
     `Titulo` longtext CHARACTER SET utf8mb4 NOT NULL,
     `Autor` longtext CHARACTER SET utf8mb4 NULL,
+    `Categoria` longtext CHARACTER SET utf8mb4 NULL,
     `Editorial` longtext CHARACTER SET utf8mb4 NULL,
     `Ano` int NULL,
     `Precio` decimal(65,30) NULL,
@@ -59,7 +86,7 @@ CREATE TABLE `Libros` (
 
 CREATE TABLE `Posts` (
     `Id` int NOT NULL AUTO_INCREMENT,
-    `Cita` longtext CHARACTER SET utf8mb4 NOT NULL,
+    `Cita` longtext CHARACTER SET utf8mb4 NULL,
     `Categoria` longtext CHARACTER SET utf8mb4 NULL,
     `Titulo` longtext CHARACTER SET utf8mb4 NULL,
     `Autor` longtext CHARACTER SET utf8mb4 NULL,
@@ -168,6 +195,18 @@ CREATE TABLE `Puntuaciones` (
     CONSTRAINT `FK_Puntuaciones_Posts_PostId` FOREIGN KEY (`PostId`) REFERENCES `Posts` (`Id`) ON DELETE CASCADE
 ) CHARACTER SET=utf8mb4;
 
+INSERT INTO `About` (`Id`, `ImagenG`, `ImagenM`, `Texto`, `Titulo`)
+VALUES (1, 'images/sobre-mi_1920x1080.webp', 'images/sobre-mi_1280x720.webp', CONCAT('Soy Rubén, un profesor enamorado del diálogo profundo, del arte de pronunciar la frase exacta en el momento preciso. Estoy en continua búsqueda de aquellas frases que motiven e inspiren a mis alumnos, pero también encuentro en cada reflexión una oportunidad para elevar mi propio aprendizaje.', CHAR(13, 10), 'Me encanta explorar modelos mentales que me permitan pensar con mayor claridad, enriquecer mi conversación a través del conocimiento y descubrir frases eternas que marcan el camino.'), 'Sobre mí');
+
+INSERT INTO `Blog` (`Id`, `ImagenG`, `ImagenM`, `Texto`, `Titulo`)
+VALUES (1, 'images/blog_1920x1080.webp', 'images/blog_1280x720.webp', CONCAT('En este blog analizo frases breves con enorme significado de los grandes pensadores de la Historia. De esta forma podrás enriquecer tus conversaciones, tomar mejores decisiones y pensar con mayor claridad. Este espacio es para personas amantes del conocimiento que desean elevar su expresión y aumentar sus recursos mentales para pensar con mayor profundidad.', CHAR(13, 10), 'Creo firmemente en el conocimiento como herramienta de transformación personal. Pero no basta con poseerlo; hay que aplicarlo.', CHAR(13, 10), 'Por eso cada frase irá acompañada de aplicaciones prácticas, para implementar esa píldora de conocimiento en nuestra vida y nuestras conversaciones. Solo así se convertirá en verdadera sabiduría.', CHAR(13, 10), 'Lucho contra la trivialidad, las conversaciones monótonas y el estancamiento intelectual. Quiero contribuir a que puedas impactar más con tus palabras y conversaciones.', CHAR(13, 10), 'Soy Rubén, un profesor enamorado del diálogo profundo, del arte de pronunciar la frase exacta en el momento preciso. En mi aula, busco inspirar y guiar a mis alumnos, pero también encuentro en cada reflexión una oportunidad para elevar mi propio aprendizaje.', CHAR(13, 10), 'Súmate a este viaje. Juntos, dominaremos el arte de la conversación con frases eternas.'), 'Este blog');
+
+INSERT INTO `Legales` (`Id`, `Descripcion`, `Nombre`, `Texto`)
+VALUES (1, 'Aviso legal', 'aviso', 'Texto del aviso legal'),
+(2, 'Política de privacidad', 'privacidad', 'Texto de la política de privacidad'),
+(3, 'Política de cookies', 'cookies', 'Texto de la política de cookies'),
+(4, 'Términos y condiciones', 'terminos', 'Texto de los términos y condiciones');
+
 INSERT INTO `Tarjetas` (`Id`, `Descripcion`, `Imagen`, `Titulo`, `TituloNormalizado`)
 VALUES (1, 'El ser humano se embarca en una búsqueda incansable hacia la conquista de ese estado pleno y sereno. ¿Qué sabemos sobre la felicidad? ¿A qué conclusiones llegaron los grandes pensadores? En esta sección descubrirás principios de grandes pensadores sobre esta búsqueda atemporal.', 'images/felicidad_300x200.webp', 'FELICIDAD', 'felicidad'),
 (2, 'En el tejido mismo de la existencia reside una verdad inquebrantable: la necesidad imperiosa de los demás. Cultivar habilidades para relacionarse con solidez y perspicacia se erige como un conocimiento vital, una sabiduría preclara que los grandes pensadores abrazaron yque ahora exploraremos. Adéntrate en el arte de edificar relaciones más robustas y trascendentes.', 'images/relaciones-personales_300x200.webp', 'RELACIONES PERSONALES', 'relaciones-personales'),
@@ -201,12 +240,14 @@ CREATE INDEX `IX_EtiquetasPosts_IdEtiqueta` ON `EtiquetasPosts` (`IdEtiqueta`);
 
 CREATE INDEX `IX_EtiquetasPosts_IdPost` ON `EtiquetasPosts` (`IdPost`);
 
+CREATE UNIQUE INDEX `IX_Legales_Nombre` ON `Legales` (`Nombre`);
+
 CREATE INDEX `IX_Puntuaciones_IdUsuario` ON `Puntuaciones` (`IdUsuario`);
 
 CREATE INDEX `IX_Puntuaciones_PostId` ON `Puntuaciones` (`PostId`);
 
 INSERT INTO `__EFMigrationsHistory` (`MigrationId`, `ProductVersion`)
-VALUES ('20240407123812_Inicial', '8.0.3');
+VALUES ('20240624140650_Inicial', '8.0.3');
 
 COMMIT;
 

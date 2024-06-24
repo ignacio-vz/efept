@@ -12,7 +12,7 @@ using efept.Data;
 namespace efept.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240407123812_Inicial")]
+    [Migration("20240624140650_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />
@@ -221,6 +221,76 @@ namespace efept.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("efept.Entities.About", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ImagenG")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ImagenM")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Texto")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Titulo")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("About");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ImagenG = "images/sobre-mi_1920x1080.webp",
+                            ImagenM = "images/sobre-mi_1280x720.webp",
+                            Texto = "Soy Rubén, un profesor enamorado del diálogo profundo, del arte de pronunciar la frase exacta en el momento preciso. Estoy en continua búsqueda de aquellas frases que motiven e inspiren a mis alumnos, pero también encuentro en cada reflexión una oportunidad para elevar mi propio aprendizaje.\r\nMe encanta explorar modelos mentales que me permitan pensar con mayor claridad, enriquecer mi conversación a través del conocimiento y descubrir frases eternas que marcan el camino.",
+                            Titulo = "Sobre mí"
+                        });
+                });
+
+            modelBuilder.Entity("efept.Entities.Blog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ImagenG")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ImagenM")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Texto")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Titulo")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Blog");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ImagenG = "images/blog_1920x1080.webp",
+                            ImagenM = "images/blog_1280x720.webp",
+                            Texto = "En este blog analizo frases breves con enorme significado de los grandes pensadores de la Historia. De esta forma podrás enriquecer tus conversaciones, tomar mejores decisiones y pensar con mayor claridad. Este espacio es para personas amantes del conocimiento que desean elevar su expresión y aumentar sus recursos mentales para pensar con mayor profundidad.\r\nCreo firmemente en el conocimiento como herramienta de transformación personal. Pero no basta con poseerlo; hay que aplicarlo.\r\nPor eso cada frase irá acompañada de aplicaciones prácticas, para implementar esa píldora de conocimiento en nuestra vida y nuestras conversaciones. Solo así se convertirá en verdadera sabiduría.\r\nLucho contra la trivialidad, las conversaciones monótonas y el estancamiento intelectual. Quiero contribuir a que puedas impactar más con tus palabras y conversaciones.\r\nSoy Rubén, un profesor enamorado del diálogo profundo, del arte de pronunciar la frase exacta en el momento preciso. En mi aula, busco inspirar y guiar a mis alumnos, pero también encuentro en cada reflexión una oportunidad para elevar mi propio aprendizaje.\r\nSúmate a este viaje. Juntos, dominaremos el arte de la conversación con frases eternas.",
+                            Titulo = "Este blog"
+                        });
+                });
+
             modelBuilder.Entity("efept.Entities.Comentario", b =>
                 {
                     b.Property<int>("Id")
@@ -312,6 +382,61 @@ namespace efept.Migrations
                     b.ToTable("EtiquetasPosts");
                 });
 
+            modelBuilder.Entity("efept.Entities.Legal", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Texto")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Nombre")
+                        .IsUnique();
+
+                    b.ToTable("Legales");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Descripcion = "Aviso legal",
+                            Nombre = "aviso",
+                            Texto = "Texto del aviso legal"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Descripcion = "Política de privacidad",
+                            Nombre = "privacidad",
+                            Texto = "Texto de la política de privacidad"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Descripcion = "Política de cookies",
+                            Nombre = "cookies",
+                            Texto = "Texto de la política de cookies"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Descripcion = "Términos y condiciones",
+                            Nombre = "terminos",
+                            Texto = "Texto de los términos y condiciones"
+                        });
+                });
+
             modelBuilder.Entity("efept.Entities.Libro", b =>
                 {
                     b.Property<int>("Id")
@@ -324,6 +449,9 @@ namespace efept.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Autor")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Categoria")
                         .HasColumnType("longtext");
 
                     b.Property<string>("Editorial")
@@ -365,7 +493,6 @@ namespace efept.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Cita")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Imagen")

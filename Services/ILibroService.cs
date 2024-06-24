@@ -9,5 +9,6 @@ namespace efept.Services
         Task<Libro?> GetLibro(int id);
         Task<Libro> UpdateLibro(int id, Libro libro);
         Task<Libro?> DeleteLibro(int id);
+        Task<List<Libro>> GetLibrosByCategoria(string categoria);
     }
 }

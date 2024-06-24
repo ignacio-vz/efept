@@ -1,0 +1,34 @@
+﻿@page "/recursos/{categoria}"
+@attribute [StreamRendering(true)]
+
+@inject ILibroService LibroService
+
+<PageTitle>@((categoria.Substring(0,1).ToUpper() + categoria.Substring(1)).Replace("-", " "))</PageTitle>
+
+@if (Libros != null && Libros.Count() > 0)
+{
+    <ul>
+        @foreach (var libro in Libros)
+        {
+            <li>@libro.Titulo</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Cargando...</p>
+}
+
+@code {
+    [Parameter]
+    public string? categoria { get; set; }
+    public List<Libro>? Libros { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (categoria != null)
+        {
+            Libros = await LibroService.GetLibrosByCategoria(categoria);
+        }
+    }
+}

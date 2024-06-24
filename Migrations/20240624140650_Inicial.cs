@@ -18,6 +18,27 @@ namespace efept.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "About",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Titulo = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Texto = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ImagenG = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ImagenM = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_About", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
                 {
@@ -72,6 +93,27 @@ namespace efept.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Blog",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Titulo = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Texto = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ImagenG = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    ImagenM = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Blog", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Etiquetas",
                 columns: table => new
                 {
@@ -87,6 +129,25 @@ namespace efept.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Legales",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Nombre = table.Column<string>(type: "varchar(255)", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Descripcion = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Texto = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4")
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Legales", x => x.Id);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Libros",
                 columns: table => new
                 {
@@ -95,6 +156,8 @@ namespace efept.Migrations
                     Titulo = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Autor = table.Column<string>(type: "longtext", nullable: true)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    Categoria = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Editorial = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -119,7 +182,7 @@ namespace efept.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Cita = table.Column<string>(type: "longtext", nullable: false)
+                    Cita = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Categoria = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -419,6 +482,27 @@ namespace efept.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.InsertData(
+                table: "About",
+                columns: new[] { "Id", "ImagenG", "ImagenM", "Texto", "Titulo" },
+                values: new object[] { 1, "images/sobre-mi_1920x1080.webp", "images/sobre-mi_1280x720.webp", "Soy Rubén, un profesor enamorado del diálogo profundo, del arte de pronunciar la frase exacta en el momento preciso. Estoy en continua búsqueda de aquellas frases que motiven e inspiren a mis alumnos, pero también encuentro en cada reflexión una oportunidad para elevar mi propio aprendizaje.\r\nMe encanta explorar modelos mentales que me permitan pensar con mayor claridad, enriquecer mi conversación a través del conocimiento y descubrir frases eternas que marcan el camino.", "Sobre mí" });
+
+            migrationBuilder.InsertData(
+                table: "Blog",
+                columns: new[] { "Id", "ImagenG", "ImagenM", "Texto", "Titulo" },
+                values: new object[] { 1, "images/blog_1920x1080.webp", "images/blog_1280x720.webp", "En este blog analizo frases breves con enorme significado de los grandes pensadores de la Historia. De esta forma podrás enriquecer tus conversaciones, tomar mejores decisiones y pensar con mayor claridad. Este espacio es para personas amantes del conocimiento que desean elevar su expresión y aumentar sus recursos mentales para pensar con mayor profundidad.\r\nCreo firmemente en el conocimiento como herramienta de transformación personal. Pero no basta con poseerlo; hay que aplicarlo.\r\nPor eso cada frase irá acompañada de aplicaciones prácticas, para implementar esa píldora de conocimiento en nuestra vida y nuestras conversaciones. Solo así se convertirá en verdadera sabiduría.\r\nLucho contra la trivialidad, las conversaciones monótonas y el estancamiento intelectual. Quiero contribuir a que puedas impactar más con tus palabras y conversaciones.\r\nSoy Rubén, un profesor enamorado del diálogo profundo, del arte de pronunciar la frase exacta en el momento preciso. En mi aula, busco inspirar y guiar a mis alumnos, pero también encuentro en cada reflexión una oportunidad para elevar mi propio aprendizaje.\r\nSúmate a este viaje. Juntos, dominaremos el arte de la conversación con frases eternas.", "Este blog" });
+
+            migrationBuilder.InsertData(
+                table: "Legales",
+                columns: new[] { "Id", "Descripcion", "Nombre", "Texto" },
+                values: new object[,]
+                {
+                    { 1, "Aviso legal", "aviso", "Texto del aviso legal" },
+                    { 2, "Política de privacidad", "privacidad", "Texto de la política de privacidad" },
+                    { 3, "Política de cookies", "cookies", "Texto de la política de cookies" },
+                    { 4, "Términos y condiciones", "terminos", "Texto de los términos y condiciones" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "Tarjetas",
                 columns: new[] { "Id", "Descripcion", "Imagen", "Titulo", "TituloNormalizado" },
                 values: new object[,]
@@ -498,6 +582,12 @@ namespace efept.Migrations
                 column: "IdPost");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Legales_Nombre",
+                table: "Legales",
+                column: "Nombre",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Puntuaciones_IdUsuario",
                 table: "Puntuaciones",
                 column: "IdUsuario");
@@ -511,6 +601,9 @@ namespace efept.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "About");
+
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -527,6 +620,9 @@ namespace efept.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Blog");
+
+            migrationBuilder.DropTable(
                 name: "Comentarios");
 
             migrationBuilder.DropTable(
@@ -534,6 +630,9 @@ namespace efept.Migrations
 
             migrationBuilder.DropTable(
                 name: "EtiquetasPosts");
+
+            migrationBuilder.DropTable(
+                name: "Legales");
 
             migrationBuilder.DropTable(
                 name: "Puntuaciones");

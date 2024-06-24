@@ -448,6 +448,9 @@ namespace efept.Migrations
                     b.Property<string>("Autor")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Categoria")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Editorial")
                         .HasColumnType("longtext");
 
