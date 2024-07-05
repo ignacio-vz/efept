@@ -9,34 +9,34 @@
 <button @onclick="ToggleMenu" id="hamburger-menu" class="hamburger-menu">☰</button>
 <div class="contenedor-navbar-ul">
     <ul class="navbar-ul-desktop">
-        <NavLink href="/blog" target="_self">
+        <NavLink href="/blog" target="_self" class="enlaces-navbar-desktop">
             <li>Este blog</li>
         </NavLink>
-        <NavLink href="/sobre-mi" target="_self">
+        <NavLink href="/sobre-mi" target="_self" class="enlaces-navbar-desktop">
             <li>Sobre mí</li>
         </NavLink>
-        <NavLink href="/contacto" target="_self">
+        <NavLink href="/contacto" target="_self" class="enlaces-navbar-desktop">
             <li>Contacto</li>
         </NavLink>
-        <NavLink href="/recursos" target="_self">
+        <NavLink href="/recursos" target="_self" class="enlaces-navbar-desktop">
             <li>Recursos</li>
         </NavLink>
         <AuthorizeView>
             <Authorized>
-                <NavLink href="/Account/Profile" target="_self">
+                <NavLink href="/perfil" target="_self" class="enlaces-navbar-desktop">
                     <li>@context.User.Identity?.Name</li>
                 </NavLink>
-                <form method="post" action="Account/Logout">
+                <form method="post" action="Account/Logout" class="enlaces-navbar-desktop">
                     <AntiforgeryToken />
                     <input type="hidden" name="returnUrl" value="" />
                     <button class="boton-cerrar-sesion" type="submit">Cerrar sesión</button>
                 </form>
             </Authorized>
             <NotAuthorized>
-                <NavLink href="/Account/Register" target="_self">
+                <NavLink href="/Account/Register" target="_self" class="enlaces-navbar-desktop">
                     <li>Registro</li>
                 </NavLink>
-                <NavLink href="/Account/Login" target="_self">
+                <NavLink href="/Account/Login" target="_self" class="enlaces-navbar-desktop">
                     <li>Login</li>
                 </NavLink>
             </NotAuthorized>
@@ -56,6 +56,26 @@
         <NavLink href="/recursos" target="_self" @onclick="ToggleMenu">
             <li>Recursos</li>
         </NavLink>
+        <AuthorizeView>
+            <Authorized>
+                <NavLink href="/perfil" target="_self" @onclick="ToggleMenu">
+                    <li>@context.User.Identity?.Name</li>
+                </NavLink>
+                <form method="post" action="Account/Logout">
+                    <AntiforgeryToken />
+                    <input type="hidden" name="returnUrl" value="" />
+                    <button class="boton-cerrar-sesion" type="submit" @onclick="ToggleMenu">Cerrar sesión</button>
+                </form>
+            </Authorized>
+            <NotAuthorized>
+                <NavLink href="/Account/Register" target="_self" @onclick="ToggleMenu">
+                    <li>Registro</li>
+                </NavLink>
+                <NavLink href="/Account/Login" target="_self" @onclick="ToggleMenu">
+                    <li>Login</li>
+                </NavLink>
+            </NotAuthorized>
+        </AuthorizeView>
     </ul>
 </div>
 
