@@ -12,23 +12,23 @@
         <EditForm class="contenedor-formulario-registro" Model="@contactForm" OnValidSubmit="HandleValidSubmit">
             <h1 class="titulo-registro">Contacto</h1>
             <div class="contenedor-elemento-registro">
-                <InputText id="nombreContacto" @bind-Value="contactForm.Name" aria-required="true" />
-                <label for="nombreContacto">Nombre</label>
+                <InputText id="nombreContacto" @bind-Value="contactForm.Name" aria-required="true" placeholder="Nombre"/>
+                <label class="hidewhenwidthlessthan489px" for="nombreContacto">Nombre</label>
                 <ValidationMessage For="@(() => contactForm.Name)" />
             </div>
             <div class="contenedor-elemento-registro">
-                <InputText id="emailContacto" type="email" @bind-Value="contactForm.Email" aria-required="true" />
-                <label for="emailContacto">Correo electrónico</label>
+                <InputText id="emailContacto" type="email" @bind-Value="contactForm.Email" aria-required="true" placeholder="Correo electrónico" />
+                <label class="hidewhenwidthlessthan489px" for="emailContacto">Correo electrónico</label>
                 <ValidationMessage For="@(() => contactForm.Email)" />
             </div>
             <div class="contenedor-elemento-registro">
-                <InputText id="asuntoContacto" @bind-Value="contactForm.Subject" aria-required="true" />
-                <label for="asuntoContacto">Asunto</label>
+                <InputText id="asuntoContacto" @bind-Value="contactForm.Subject" aria-required="true" placeholder="Asunto" />
+                <label class="hidewhenwidthlessthan489px" for="asuntoContacto">Asunto</label>
                 <ValidationMessage For="@(() => contactForm.Subject)" />
             </div>
             <div class="contenedor-elemento-registro">
-                <InputText id="mensajeContacto" @bind-Value="contactForm.Message" aria-required="true" />
-                <label for="mensajeContacto">Mensaje</label>
+                <InputTextArea id="mensajeContacto" @bind-Value="contactForm.Message" aria-required="true" placeholder="Mensaje" />
+                <label class="hidewhenwidthlessthan489px hidewhenwidthlessthan533px" for="mensajeContacto">Mensaje</label>
                 <ValidationMessage For="@(() => contactForm.Message)" />
             </div>
             <button class="boton-registro" type="submit">Enviar</button>

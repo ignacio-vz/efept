@@ -65,11 +65,18 @@ a {
     color: black;
 }
 
+.margintop50 {
+    margin-top: 50px;
+}
+
 /* IMÁGENES */
 
 @media (min-width: 1920px) {
     .imagenes {
         aspect-ratio: 16/9;
+    }
+    .imagen-apartados-generales {
+        max-width: 600px;
     }
 }
 
@@ -77,11 +84,17 @@ a {
     .imagenes {
         aspect-ratio: 16/9;
     }
+    .imagen-apartados-generales {
+        max-width: 600px;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
     .imagenes {
         aspect-ratio: 4/3;
+    }
+    .imagen-apartados-generales {
+        max-width: 600px;
     }
 }
 
@@ -89,11 +102,17 @@ a {
     .imagenes {
         aspect-ratio: 3/4;
     }
+    .imagen-apartados-generales {
+        max-width: 600px;
+    }
 }
 
-@media (min-width: 768px) and (max-width: 767px) and (orientation: portrait) {
+@media (min-width: 720px) and (max-width: 767px) and (orientation: portrait) {
     .imagenes {
         aspect-ratio: 9/16;
+    }
+    .imagen-apartados-generales {
+        max-width: 600px;
     }
 }
 
@@ -101,17 +120,26 @@ a {
     .imagenes {
         aspect-ratio: 71/40;
     }
+    .imagen-apartados-generales {
+        max-width: 600px;
+    }
 }
 
 @media (max-width: 719px) and (orientation: portrait) {
     .imagenes {
         aspect-ratio: 3/5;
     }
+    .imagen-apartados-generales {
+        max-width: 90vw;
+    }
 }
 
 @media (max-width: 639px) and (orientation: landscape) {
     .imagenes {
         aspect-ratio: 71/40;
+    }
+    .imagen-apartados-generales {
+        max-width: 90vw;
     }
 }
 
@@ -587,6 +615,8 @@ a {
     align-items: center;
     min-height: calc(100vh - 340px);
     font-size: 20px;
+    max-width: 90vw;
+    margin: 0 auto;
 }
 
 .contenedor-formulario-registro {
@@ -601,6 +631,15 @@ a {
 .contenedor-elemento-registro input {
     height: 40px;
     width: 250px;
+    border-radius: 5px;
+    font-size: inherit;
+    padding: 10px;
+}
+
+.contenedor-elemento-registro textarea {
+    min-height: 120px;
+    width: 400px;
+    max-width: 95vw;
     border-radius: 5px;
     font-size: inherit;
     padding: 10px;
@@ -661,6 +700,30 @@ a {
     text-align: center;
 }
 
+@media(max-width: 532px) {
+    .hidewhenwidthlessthan533px {
+        display: none;
+    }
+}
+
+@media(max-width: 488px) {
+    .hidewhenwidthlessthan489px {
+        display: none;
+    }
+    .contenedor-elemento-registro {
+        width: 100%;
+        max-width: 95vw;
+    }
+    .contenedor-elemento-registro input {
+        width: 100%;
+    }
+
+    .contenedor-elemento-registro textarea {
+        
+    }
+}
+
+
 /* PERFIL */
 .center-red {
     color: red;
@@ -671,4 +734,16 @@ a {
 
 .gap0 {
     gap: 0;
+}
+
+/* RECURSOS */
+
+.contenedor-recursos {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../images/recursos_1280x720.webp);
+    background-size: cover;
+}
+
+.recursos-tarjetas {
+    margin-top: 30px;
+    margin-bottom: 40px;
 }

@@ -19,10 +19,10 @@
                 <picture>
                     <source media="(min-width: 1920px)" srcset="@about.ImagenG">
                     <source media="(max-width: 1919px)" srcset="@about.ImagenM">
-                    <img src="@about.ImagenM" alt="@about.Titulo" loading="eager">
+                    <img class="imagenes imagen-apartados-generales" src="@about.ImagenM" alt="@about.Titulo" loading="eager">
                 </picture>
             }
-            <p class="respetar-saltos">
+            <p class="respetar-saltos margintop50">
                 @if (about != null && about.Texto != null)
                 {
                     @about.Texto

@@ -4,15 +4,15 @@
 
 <PageTitle>Recursos</PageTitle>
 
-<div>
-    <picture>
+<div class="contenedor-recursos">
+    @* <picture>
         <source media="(min-width: 1920px)" srcset="images/recursos_1920x1080.webp">
         <source media="(min-width: 1280px) and (max-width: 1919px)" srcset="images/recursos_1280x720.webp">
         <source media="(min-width: 1024px) and (max-width: 1279px) and (orientation: landscape)"
                 srcset="images/recursos_1024x768.webp">
         <img src="images/recursos_1280x720.webp" alt="fondo_principal" loading="eager"
              class="fondo_principal imagenes">
-    </picture>
+    </picture> *@
     <div class="contenedor-tarjetas-index">
         @if (Tarjetas != null && Tarjetas.Any())
         {
@@ -21,13 +21,7 @@
                 <div class="tarjeta @(Tarjeta.Titulo == "FELICIDAD" ? "tarjeta-felicidad" : Tarjeta.Titulo == "MENTALIDAD" ? "tarjeta-mentalidad" : "")">
                     <NavLink href="@($"/recursos/{Tarjeta.TituloNormalizado}")" target="_self">
                         <img src="@Tarjeta.Imagen" alt="@Tarjeta.Titulo" loading="lazy" class="imagen-tarjeta">
-                        <h3 class="titulo-tarjeta">@Tarjeta.Titulo</h3>
-                        @if (Tarjeta.Descripcion != null)
-                        {
-                            <p class="descripcion-tarjeta">
-                                @string.Join(" ", Tarjeta.Descripcion.Split().Take(24))...
-                            </p>
-                        }
+                        <h3 class="titulo-tarjeta recursos-tarjetas">@Tarjeta.Titulo</h3>
                     </NavLink>
                 </div>
             }
